@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Fancify My Text</title>
+    <script src="fancifymytext.js" defer></script>
+</head>
+<body>
+
+    <fieldset>
+        <legend>Text</legend>
+        <textarea id="userText" rows="4" cols="30"></textarea>
+    </fieldset>
+
+    <fieldset>
+        <legend>Fancify</legend>
+        <button id="biggerBtn" onclick="makeTextBigger()">Bigger!</button>
+        <br><br>
+        <input type="radio" name="fancyOption" id="fancyShmancy" onchange="fancifyChange()" />
+        <label for="fancyShmancy">FancyShmancy</label>
+        <input type="radio" name="fancyOption" id="boringBetty" onchange="fancifyChange()" checked />
+        <label for="boringBetty">BoringBetty</label>
+    </fieldset>
+
+    <button id="mooBtn" onclick="mooify()">Moo</button>
+
+</body>
+</html>
