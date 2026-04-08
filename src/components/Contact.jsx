@@ -1,3 +1,4 @@
+import useScrollReveal from '../hooks/useScrollReveal'
 import styles from './Contact.module.css'
 
 const socials = [
@@ -19,9 +20,10 @@ const socials = [
 ]
 
 export default function Contact() {
+  const ref = useScrollReveal()
   return (
     <section id="contact">
-      <div className="container">
+      <div className="container reveal" ref={ref}>
         <p className="section-label">// get in touch</p>
         <h2 className="section-title">Contact</h2>
         <div className={styles.layout}>

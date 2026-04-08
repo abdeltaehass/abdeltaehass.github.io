@@ -1,3 +1,4 @@
+import useScrollReveal from '../hooks/useScrollReveal'
 import styles from './Projects.module.css'
 
 const projects = [
@@ -74,9 +75,10 @@ function ProjectCard({ project }) {
 }
 
 export default function Projects() {
+  const ref = useScrollReveal()
   return (
     <section id="projects">
-      <div className="container">
+      <div className={`container reveal`} ref={ref}>
         <p className="section-label">// what I've built</p>
         <h2 className="section-title">Projects</h2>
         <div className={styles.grid}>

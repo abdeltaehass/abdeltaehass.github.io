@@ -60,6 +60,18 @@ section {
   color: var(--text);
 }
 
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: none;
+}
+
 @media (max-width: 600px) {
   section { padding: 60px 0; }
   .section-title { font-size: 1.5rem; }

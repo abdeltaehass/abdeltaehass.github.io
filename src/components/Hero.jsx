@@ -20,7 +20,7 @@ export default function Hero() {
         <div className={styles.actions}>
           <a href="#projects" className={styles.primary}>View Projects</a>
           <a
-            href="/resume.pdf"
+            href={`${import.meta.env.BASE_URL}resume.pdf`}
             target="_blank"
             rel="noopener noreferrer"
             className={styles.secondary}
@@ -47,7 +47,7 @@ $ cat stack.txt
 Python · Flutter · React · PyTorch · AWS · LangChain
 
 $ ls projects/
-nids/  al-manar/  fajr/  ...`}<span className={styles.cursor}>▌</span></pre>
+saint/  govcon/  fajr/  pingvault/  ...`}<span className={styles.cursor}>▌</span></pre>
         </div>
       </div>
     </section>

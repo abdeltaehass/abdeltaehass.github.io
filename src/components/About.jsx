@@ -1,3 +1,4 @@
+import useScrollReveal from '../hooks/useScrollReveal'
 import styles from './About.module.css'
 
 const skills = [
@@ -9,9 +10,10 @@ const skills = [
 ]
 
 export default function About() {
+  const ref = useScrollReveal()
   return (
     <section id="about">
-      <div className="container">
+      <div className="container reveal" ref={ref}>
         <p className="section-label">// who I am</p>
         <h2 className="section-title">About Me</h2>
         <div className={styles.layout}>
@@ -34,7 +36,7 @@ export default function About() {
               and A+ certifications, and building iOS apps in my spare time.
             </p>
             <a
-              href="/resume.pdf"
+              href={`${import.meta.env.BASE_URL}resume.pdf`}
               target="_blank"
               rel="noopener noreferrer"
               className={styles.resumeBtn}
