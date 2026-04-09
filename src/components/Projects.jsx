@@ -31,11 +31,11 @@ const projects = [
     live: 'https://abdeltaehass.pythonanywhere.com/bids',
   },
   {
-    name: 'Fajr — Islamic Prayer App',
+    name: 'Al-Manar — Islamic Prayer App',
     description: 'Full-featured Islamic companion app with GPS-based prayer times, offline caching, Qibla compass, full Quran with 7 reciters and audio playback, daily hadith, athkar, nearby masjid finder, and 7 customizable color themes.',
     tags: ['Flutter', 'Dart', 'Google Places API', 'just_audio'],
     github: 'https://github.com/abdeltaehass/Fajr',
-    live: null,
+    live: 'https://apps.apple.com/us/app/al-manar/id6759625182',
   },
 ]
 
