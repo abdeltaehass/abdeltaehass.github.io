@@ -3,6 +3,13 @@ import styles from './Projects.module.css'
 
 const projects = [
   {
+    name: 'AutoApply',
+    description: 'Automated job application tool that streamlines submitting applications across multiple platforms.',
+    tags: ['Python', 'HTML'],
+    github: 'https://github.com/abdeltaehass/AutoApply',
+    live: null,
+  },
+  {
     name: 'S.A.I.N.T.',
     description: 'Network Intrusion Detection System with an AI agent reasoning engine for threat detection — 89% accuracy on NSL-KDD (125K+ samples). Low-latency inference via Flask + Redis + Plotly, processing 50–100 connections/sec with an interactive agent-in-the-loop dashboard.',
     tags: ['Python', 'PyTorch', 'Flask', 'Redis', 'Plotly'],
