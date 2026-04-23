@@ -1,8 +1,54 @@
 .hero {
+  position: relative;
   min-height: 100vh;
   display: flex;
   align-items: center;
   padding: 100px 0 60px;
+  overflow: hidden;
+}
+
+.hero::before,
+.hero::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.35;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero::before {
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle, rgba(124, 106, 247, 0.7), transparent 70%);
+  top: -80px;
+  left: -120px;
+  animation: float1 14s ease-in-out infinite alternate;
+}
+
+.hero::after {
+  width: 360px;
+  height: 360px;
+  background: radial-gradient(circle, rgba(89, 188, 255, 0.45), transparent 70%);
+  bottom: -80px;
+  right: -80px;
+  animation: float2 18s ease-in-out infinite alternate;
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes float1 {
+  0%   { transform: translate(0, 0); }
+  100% { transform: translate(60px, 40px); }
+}
+
+@keyframes float2 {
+  0%   { transform: translate(0, 0); }
+  100% { transform: translate(-50px, -30px); }
 }
 
 .inner {
