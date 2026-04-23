@@ -12,27 +12,26 @@
   content: '';
   position: absolute;
   border-radius: 50%;
-  filter: blur(90px);
-  opacity: 0.35;
+  filter: blur(70px);
   pointer-events: none;
   z-index: 0;
 }
 
 .hero::before {
-  width: 420px;
-  height: 420px;
-  background: radial-gradient(circle, rgba(124, 106, 247, 0.7), transparent 70%);
-  top: -80px;
-  left: -120px;
+  width: 520px;
+  height: 520px;
+  background: radial-gradient(circle, rgba(124, 106, 247, 0.9) 0%, rgba(124, 106, 247, 0.3) 40%, transparent 75%);
+  top: -100px;
+  left: -140px;
   animation: float1 14s ease-in-out infinite alternate;
 }
 
 .hero::after {
-  width: 360px;
-  height: 360px;
-  background: radial-gradient(circle, rgba(89, 188, 255, 0.45), transparent 70%);
-  bottom: -80px;
-  right: -80px;
+  width: 460px;
+  height: 460px;
+  background: radial-gradient(circle, rgba(89, 188, 255, 0.75) 0%, rgba(89, 188, 255, 0.25) 40%, transparent 75%);
+  bottom: -120px;
+  right: -100px;
   animation: float2 18s ease-in-out infinite alternate;
 }
 

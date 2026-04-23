@@ -61,7 +61,18 @@
   font-size: 0.82rem;
   color: var(--accent);
   margin-top: 4px;
+}
+
+.location {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin-top: 4px;
   margin-bottom: 14px;
+}
+
+.company + .points {
+  margin-top: 14px;
 }
 
 .points {
