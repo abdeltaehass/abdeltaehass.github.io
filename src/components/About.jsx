@@ -17,6 +17,15 @@ export default function About() {
         <p className="section-label">// who I am</p>
         <h2 className="section-title">About Me</h2>
         <div className={styles.layout}>
+          <div className={styles.photoWrap}>
+            <div className={styles.photoFrame}>
+              <img
+                src={`${import.meta.env.BASE_URL}HeadShot.PNG`}
+                alt="Abdel Rahman Taeha"
+                className={styles.photo}
+              />
+            </div>
+          </div>
           <div className={styles.bio}>
             <p>
               I'm Abdel Rahman, a Software Engineer at DHCS where I build autonomous
@@ -44,16 +53,16 @@ export default function About() {
               Download Resume ↗
             </a>
           </div>
-          <div className={styles.skillsBox}>
-            <p className={styles.skillsLabel}>Technologies I work with</p>
-            <ul className={styles.skills}>
-              {skills.map(s => (
-                <li key={s} className={styles.skill}>
-                  <span className={styles.arrow}>▸</span> {s}
-                </li>
-              ))}
-            </ul>
-          </div>
+        </div>
+        <div className={styles.skillsBox}>
+          <p className={styles.skillsLabel}>Technologies I work with</p>
+          <ul className={styles.skills}>
+            {skills.map(s => (
+              <li key={s} className={styles.skill}>
+                <span className={styles.arrow}>▸</span> {s}
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>

@@ -1,4 +1,6 @@
+import { useRef } from 'react'
 import useScrollReveal from '../hooks/useScrollReveal'
+import TechIcon from './TechIcon'
 import styles from './Projects.module.css'
 
 const projects = [
@@ -47,8 +49,30 @@ const projects = [
 ]
 
 function ProjectCard({ project }) {
+  const cardRef = useRef(null)
+
+  const handleMove = (e) => {
+    const card = cardRef.current
+    if (!card) return
+    const rect = card.getBoundingClientRect()
+    const x = (e.clientX - rect.left) / rect.width - 0.5
+    const y = (e.clientY - rect.top) / rect.height - 0.5
+    card.style.transform = `perspective(800px) rotateX(${-y * 6}deg) rotateY(${x * 6}deg) translateY(-3px)`
+  }
+
+  const handleLeave = () => {
+    const card = cardRef.current
+    if (!card) return
+    card.style.transform = ''
+  }
+
   return (
-    <div className={styles.card}>
+    <div
+      ref={cardRef}
+      className={styles.card}
+      onMouseMove={handleMove}
+      onMouseLeave={handleLeave}
+    >
       <div className={styles.cardTop}>
         <svg className={styles.folderIcon} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
           <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 12.75V12A2.25 2.25 0 014.5 9.75h15A2.25 2.25 0 0121.75 12v.75m-8.69-6.44l-2.12-2.12a1.5 1.5 0 00-1.061-.44H4.5A2.25 2.25 0 002.25 6v8.25A2.25 2.25 0 004.5 16.5h15a2.25 2.25 0 002.25-2.25V9a2.25 2.25 0 00-2.25-2.25h-5.379a1.5 1.5 0 01-1.06-.44z" />
@@ -73,9 +97,7 @@ function ProjectCard({ project }) {
       <h3 className={styles.projectName}>{project.name}</h3>
       <p className={styles.projectDesc}>{project.description}</p>
       <div className={styles.tags}>
-        {project.tags.map(t => (
-          <span key={t} className={styles.tag}>{t}</span>
-        ))}
+        {project.tags.map(t => <TechIcon key={t} label={t} />)}
       </div>
     </div>
   )

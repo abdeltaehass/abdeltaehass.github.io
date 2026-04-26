@@ -62,6 +62,22 @@
   background: var(--accent-dim);
 }
 
+.linkActive {
+  color: var(--accent);
+  background: var(--accent-dim);
+}
+
+.progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), #59bcff);
+  transform-origin: left center;
+  transform: scaleX(0);
+}
+
 .ghBtn {
   font-size: 0.8rem;
   font-family: var(--font-mono);
