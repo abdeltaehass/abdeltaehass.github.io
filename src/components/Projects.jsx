@@ -108,8 +108,14 @@ export default function Projects() {
   return (
     <section id="projects">
       <div className={`container reveal`} ref={ref}>
-        <p className="section-label">// what I've built</p>
-        <h2 className="section-title">Projects</h2>
+        <p className="section-label">SELECTED WORKS</p>
+        <h2 className="section-title">
+          Engineering <span className="accent-text">Scalable</span> Digital Architectures
+        </h2>
+        <p className="section-subtitle">
+          A collection of technical projects focused on autonomous AI agents,
+          real-time data pipelines, and production mobile apps.
+        </p>
         <div className={styles.grid}>
           {projects.map(p => <ProjectCard key={p.name} project={p} />)}
         </div>

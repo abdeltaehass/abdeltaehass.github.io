@@ -2,16 +2,16 @@ import { useState, useEffect } from 'react'
 import styles from './Navbar.module.css'
 
 const links = [
+  { label: 'Home', href: '#home' },
   { label: 'Projects', href: '#projects' },
   { label: 'Experience', href: '#experience' },
   { label: 'About', href: '#about' },
-  { label: 'Contact', href: '#contact' },
 ]
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
-  const [active, setActive] = useState('')
+  const [active, setActive] = useState('#home')
   const [progress, setProgress] = useState(0)
 
   useEffect(() => {
@@ -26,12 +26,11 @@ export default function Navbar() {
   }, [])
 
   useEffect(() => {
-    const onResize = () => { if (window.innerWidth > 600) setOpen(false) }
+    const onResize = () => { if (window.innerWidth > 720) setOpen(false) }
     window.addEventListener('resize', onResize)
     return () => window.removeEventListener('resize', onResize)
   }, [])
 
-  // Track active section in viewport
   useEffect(() => {
     const ids = links.map(l => l.href.replace('#', ''))
     const els = ids.map(id => document.getElementById(id)).filter(Boolean)
@@ -55,9 +54,10 @@ export default function Navbar() {
     <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}>
       <div className={styles.progress} style={{ transform: `scaleX(${progress})` }} />
       <div className={styles.inner}>
-        <a href="#" className={styles.logo}>
-          <span className={styles.prompt}>~</span>
-          <span className={styles.name}>abdeltaeha</span>
+        <a href="#home" className={styles.logo}>
+          <span className={styles.logoBracket}>[</span>
+          <span className={styles.logoText}>ABDEL_R</span>
+          <span className={styles.logoBracket}>]</span>
         </a>
 
         <ul className={styles.links}>
@@ -71,17 +71,16 @@ export default function Navbar() {
               </a>
             </li>
           ))}
-          <li>
-            <a
-              href="https://github.com/abdeltaehass"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.ghBtn}
-            >
-              GitHub ↗
-            </a>
-          </li>
         </ul>
+
+        <a
+          href={`${import.meta.env.BASE_URL}resume.pdf`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.resumeBtn}
+        >
+          Resume
+        </a>
 
         <button
           className={styles.hamburger}
@@ -101,13 +100,13 @@ export default function Navbar() {
           </a>
         ))}
         <a
-          href="https://github.com/abdeltaehass"
+          href={`${import.meta.env.BASE_URL}resume.pdf`}
           target="_blank"
           rel="noopener noreferrer"
           className={styles.mobileLink}
           onClick={() => setOpen(false)}
         >
-          GitHub ↗
+          Resume ↗
         </a>
       </div>
     </nav>

@@ -1,10 +1,11 @@
 .timeline {
   position: relative;
-  padding-left: 24px;
-  border-left: 1px solid var(--border);
+  padding-left: 28px;
+  border-left: 1px solid var(--border-strong);
   display: flex;
   flex-direction: column;
   gap: 28px;
+  margin-top: 12px;
 }
 
 .item {
@@ -13,66 +14,69 @@
 
 .dot {
   position: absolute;
-  left: -30px;
-  top: 22px;
+  left: -34px;
+  top: 24px;
   width: 11px;
   height: 11px;
   border-radius: 50%;
   background: var(--accent);
-  box-shadow: 0 0 0 4px var(--bg), 0 0 12px var(--accent);
+  box-shadow: 0 0 0 4px var(--bg), 0 0 14px var(--accent-glow);
 }
 
 .card {
   background: var(--bg-card);
   border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 20px 24px;
-  transition: border-color 0.2s, transform 0.2s;
+  border-radius: 14px;
+  padding: 22px 26px;
+  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
 }
 
 .card:hover {
   border-color: var(--accent);
   transform: translateX(2px);
+  box-shadow: 0 12px 30px -16px var(--accent-glow);
 }
 
 .header {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-between;
   gap: 12px;
   flex-wrap: wrap;
 }
 
 .role {
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   font-weight: 700;
-  color: var(--text);
+  color: var(--accent);
+  letter-spacing: -0.005em;
 }
 
 .period {
   font-family: var(--font-mono);
-  font-size: 0.72rem;
-  color: var(--text-muted);
-  letter-spacing: 0.04em;
+  font-size: 0.7rem;
+  color: var(--accent);
+  background: var(--accent-dim);
+  border: 1px solid var(--accent);
+  padding: 4px 12px;
+  border-radius: 100px;
+  letter-spacing: 0.08em;
 }
 
 .company {
   font-family: var(--font-mono);
-  font-size: 0.82rem;
-  color: var(--accent);
-  margin-top: 4px;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-top: 6px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .location {
   font-family: var(--font-mono);
-  font-size: 0.72rem;
-  color: var(--text-muted);
+  font-size: 0.7rem;
+  color: var(--text-subtle);
   margin-top: 4px;
-  margin-bottom: 14px;
-}
-
-.company + .points {
-  margin-top: 14px;
 }
 
 .points {
@@ -80,13 +84,14 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
+  margin-top: 14px;
 }
 
 .points li {
   font-size: 0.9rem;
   color: var(--text-muted);
   line-height: 1.6;
-  padding-left: 16px;
+  padding-left: 18px;
   position: relative;
 }
 
@@ -96,5 +101,58 @@
   left: 0;
   color: var(--accent);
   font-size: 0.7rem;
-  top: 4px;
+  top: 5px;
+}
+
+/* Bottom stats grid */
+.statsGrid {
+  margin-top: 56px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.statBox {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 22px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.statBox:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.statLabel {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--accent);
+  letter-spacing: 0.14em;
+}
+
+.statValue {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.statSub {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+@media (max-width: 800px) {
+  .statsGrid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px) {
+  .statsGrid { grid-template-columns: 1fr; }
 }

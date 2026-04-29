@@ -1,68 +1,87 @@
-.layout {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
-  align-items: center;
-}
-
-.text {
-  font-size: 1rem;
-  color: var(--text-muted);
-  line-height: 1.75;
+.section {
+  padding: 80px 0 60px;
 }
 
 .links {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
 }
 
 .socialCard {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 6px;
   background: var(--bg-card);
   border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 16px 20px;
-  transition: border-color 0.2s, transform 0.15s;
+  border-radius: 12px;
+  padding: 20px 22px;
+  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
 }
 
 .socialCard:hover {
   border-color: var(--accent);
-  transform: translateX(4px);
+  transform: translateY(-3px);
+  box-shadow: 0 16px 36px -18px var(--accent-glow);
 }
 
 .socialLabel {
   font-family: var(--font-mono);
-  font-size: 0.72rem;
-  color: var(--text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
+  font-size: 0.7rem;
+  color: var(--accent);
+  letter-spacing: 0.14em;
 }
 
 .socialHandle {
-  font-size: 0.875rem;
-  color: var(--accent);
+  font-size: 0.92rem;
+  color: var(--text);
+  font-weight: 500;
 }
 
 .footer {
-  margin-top: 60px;
-  padding: 24px;
-  text-align: center;
   border-top: 1px solid var(--border);
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  color: var(--text-muted);
+  padding: 22px 0;
+  background: var(--bg-surface);
 }
 
-.footer a {
+.footerInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-subtle);
+  letter-spacing: 0.06em;
+}
+
+.footerLogo {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.footerCenter {
+  text-align: center;
+  flex: 1;
+  min-width: 220px;
+}
+
+.footerLinks {
+  display: flex;
+  gap: 18px;
+}
+
+.footerLinks a {
+  color: var(--text-muted);
+  transition: color 0.2s;
+}
+
+.footerLinks a:hover {
   color: var(--accent);
 }
 
-@media (max-width: 700px) {
-  .layout {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
+@media (max-width: 800px) {
+  .links { grid-template-columns: 1fr; }
+  .footerInner { justify-content: center; text-align: center; }
 }

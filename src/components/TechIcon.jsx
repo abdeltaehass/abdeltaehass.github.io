@@ -37,7 +37,7 @@ export default function TechIcon({ label }) {
   return (
     <span className={styles.pill}>
       <img
-        src={`https://cdn.simpleicons.org/${slug}/7c6af7`}
+        src={`https://cdn.simpleicons.org/${slug}/43e0e0`}
         alt=""
         className={styles.icon}
         loading="lazy"

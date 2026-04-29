@@ -1,7 +1,7 @@
 import './index.css'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
-import Stats from './components/Stats'
+import Stack from './components/Stack'
 import Projects from './components/Projects'
 import Experience from './components/Experience'
 import About from './components/About'
@@ -13,7 +13,7 @@ function App() {
       <Navbar />
       <main>
         <Hero />
-        <Stats />
+        <Stack />
         <Projects />
         <Experience />
         <About />
