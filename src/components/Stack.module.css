@@ -1,59 +1,56 @@
 .section {
-  padding: 60px 0 40px;
+  padding: 40px 0 40px;
 }
 
 .title {
-  font-size: 1.6rem;
-  font-weight: 700;
+  font-size: 1.4rem;
+  font-weight: 600;
   color: var(--text);
-  margin-bottom: 32px;
-  position: relative;
+  margin-bottom: 28px;
+  letter-spacing: -0.01em;
   display: inline-block;
+  position: relative;
 }
 
 .underline {
-  display: block;
-  width: 56px;
-  height: 2px;
-  background: var(--accent);
-  margin-top: 6px;
+  display: none;
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  gap: 14px;
 }
 
 .card {
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: 14px;
-  padding: 22px 24px;
+  padding: 24px;
   display: flex;
   flex-direction: column;
   gap: 12px;
-  transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+  transition: border-color 0.25s, transform 0.25s, background 0.25s;
 }
 
 .card:hover {
-  border-color: var(--accent);
-  transform: translateY(-3px);
-  box-shadow: 0 20px 40px -20px var(--accent-glow);
+  border-color: var(--border-strong);
+  transform: translateY(-2px);
+  background: var(--bg-card-hover);
 }
 
 .cardHeader {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   font-family: var(--font-mono);
   font-size: 0.7rem;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.08em;
 }
 
 .num {
-  color: var(--accent);
-  font-weight: 700;
+  color: var(--text-subtle);
+  font-weight: 500;
 }
 
 .slash {
@@ -62,13 +59,14 @@
 
 .label {
   color: var(--text-muted);
+  text-transform: uppercase;
 }
 
 .iconBox {
   margin-left: auto;
   color: var(--accent);
   background: var(--accent-dim);
-  padding: 6px;
+  padding: 7px;
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -76,14 +74,15 @@
 }
 
 .cardTitle {
-  font-size: 1.15rem;
-  font-weight: 700;
+  font-size: 1.1rem;
+  font-weight: 600;
   color: var(--text);
-  margin-top: 4px;
+  margin-top: 6px;
+  letter-spacing: -0.01em;
 }
 
 .cardDesc {
-  font-size: 0.875rem;
+  font-size: 0.9rem;
   color: var(--text-muted);
   line-height: 1.6;
   flex: 1;
@@ -93,17 +92,17 @@
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
-  margin-top: 4px;
+  margin-top: 8px;
 }
 
 .tag {
   font-family: var(--font-mono);
-  font-size: 0.68rem;
-  color: var(--accent);
-  border: 1px solid var(--accent-dim);
-  background: rgba(67, 224, 224, 0.05);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
   padding: 3px 10px;
-  border-radius: 100px;
+  border-radius: 6px;
 }
 
 @media (max-width: 800px) {

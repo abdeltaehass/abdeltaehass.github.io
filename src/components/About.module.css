@@ -4,68 +4,28 @@
 
 .layout {
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 64px;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 56px;
   align-items: center;
+  margin-top: 24px;
 }
 
 .left {
   display: flex;
   flex-direction: column;
-  gap: 22px;
-}
-
-.statusPill {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  letter-spacing: 0.12em;
-  color: var(--accent);
-  border: 1px dashed var(--accent);
-  padding: 6px 14px;
-  border-radius: 100px;
-  width: fit-content;
-}
-
-.dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--accent);
-  box-shadow: 0 0 8px var(--accent);
-  animation: pulse 1.8s ease-in-out infinite;
-}
-
-@keyframes pulse {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.6; transform: scale(0.9); }
-}
-
-.heading {
-  font-size: clamp(2.2rem, 5vw, 3.5rem);
-  font-weight: 800;
-  line-height: 1.05;
-  letter-spacing: -0.025em;
-  color: var(--text);
-  text-transform: uppercase;
-}
-
-.accentHeading {
-  color: var(--accent);
+  gap: 18px;
 }
 
 .bio {
-  font-size: 1rem;
+  font-size: 0.98rem;
   color: var(--text-muted);
   line-height: 1.75;
-  max-width: 560px;
+  max-width: 580px;
 }
 
 .metaRow {
   display: flex;
-  gap: 22px;
+  gap: 20px;
   flex-wrap: wrap;
   margin-top: 4px;
 }
@@ -74,33 +34,30 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-family: var(--font-mono);
-  font-size: 0.74rem;
-  letter-spacing: 0.08em;
-  color: var(--accent);
+  font-size: 0.85rem;
+  color: var(--text-muted);
 }
 
 .resumeBtn {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-family: var(--font-sans);
-  font-size: 0.85rem;
-  font-weight: 600;
-  background: var(--accent);
-  color: #0a0e10;
-  border: 1px solid var(--accent);
-  padding: 10px 24px;
-  border-radius: 100px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text);
+  border: 1px solid var(--border-strong);
+  background: rgba(255, 255, 255, 0.03);
+  padding: 9px 20px;
+  border-radius: 8px;
   width: fit-content;
-  margin-top: 4px;
-  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  margin-top: 8px;
+  transition: background 0.2s, border-color 0.2s;
 }
 
 .resumeBtn:hover {
-  background: var(--accent-bright);
-  transform: translateY(-2px);
-  box-shadow: 0 12px 30px -10px var(--accent-glow);
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #0b0d10;
 }
 
 /* Photo */
@@ -112,36 +69,19 @@
 
 .photoFrame {
   position: relative;
-  border-radius: 16px;
+  border-radius: 14px;
   overflow: hidden;
-  border: 1px solid var(--border-strong);
+  border: 1px solid var(--border);
   background: var(--bg-card);
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 4 / 5;
   width: 100%;
-  max-width: 360px;
-  transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
-  box-shadow: 0 30px 60px -30px var(--accent-glow);
-}
-
-.photoFrame::before {
-  content: '';
-  position: absolute;
-  inset: -2px;
-  border-radius: 18px;
-  background: linear-gradient(135deg, var(--accent), transparent 60%);
-  opacity: 0;
-  z-index: -1;
-  transition: opacity 0.3s;
+  max-width: 320px;
+  transition: transform 0.3s, border-color 0.3s;
 }
 
 .photoFrame:hover {
-  transform: translateY(-4px);
-  border-color: var(--accent);
-  box-shadow: 0 30px 70px -20px var(--accent-glow);
-}
-
-.photoFrame:hover::before {
-  opacity: 1;
+  transform: translateY(-3px);
+  border-color: var(--border-strong);
 }
 
 .photo {
@@ -149,7 +89,6 @@
   height: 100%;
   object-fit: cover;
   display: block;
-  filter: saturate(1.05);
 }
 
 /* Capabilities */
@@ -158,11 +97,11 @@
 }
 
 .capLabel {
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: 0.78rem;
   color: var(--text-muted);
-  letter-spacing: 0.16em;
-  margin-bottom: 20px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
   padding-bottom: 12px;
   border-bottom: 1px solid var(--border);
 }
@@ -170,67 +109,66 @@
 .capGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  gap: 14px;
 }
 
 .capCard {
   background: var(--bg-card);
   border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 24px;
+  border-radius: 12px;
+  padding: 22px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+  gap: 10px;
+  transition: border-color 0.2s, background 0.2s;
 }
 
 .capCard:hover {
-  border-color: var(--accent);
-  transform: translateY(-3px);
-  box-shadow: 0 16px 36px -18px var(--accent-glow);
+  border-color: var(--border-strong);
+  background: var(--bg-card-hover);
 }
 
 .capIcon {
-  width: 36px;
-  height: 36px;
-  border-radius: 10px;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
   background: var(--accent-dim);
   color: var(--accent);
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 2px;
 }
 
 .capTitle {
-  font-size: 1.1rem;
-  font-weight: 700;
+  font-size: 1.02rem;
+  font-weight: 600;
   color: var(--text);
+  letter-spacing: -0.01em;
 }
 
 .capDesc {
-  font-size: 0.875rem;
+  font-size: 0.88rem;
   color: var(--text-muted);
-  line-height: 1.65;
+  line-height: 1.6;
   flex: 1;
 }
 
 .capTags {
   display: flex;
-  flex-direction: column;
-  gap: 4px;
+  flex-wrap: wrap;
+  gap: 6px;
   margin-top: 6px;
 }
 
 .capTag {
   font-family: var(--font-mono);
-  font-size: 0.66rem;
-  color: var(--text-subtle);
-  letter-spacing: 0.12em;
-}
-
-.capTagDot {
-  color: var(--accent);
-  margin-right: 4px;
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  padding: 3px 9px;
+  border-radius: 6px;
 }
 
 @media (max-width: 900px) {
@@ -238,6 +176,6 @@
     grid-template-columns: 1fr;
     gap: 36px;
   }
-  .photoFrame { max-width: 300px; }
+  .photoFrame { max-width: 280px; }
   .capGrid { grid-template-columns: 1fr; }
 }

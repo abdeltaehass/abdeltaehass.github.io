@@ -103,11 +103,11 @@ export default function Experience() {
   return (
     <section id="experience">
       <div className={`container reveal`} ref={ref}>
-        <p className="section-label">PROFESSIONAL JOURNEY</p>
-        <h2 className="section-title">A track record of building.</h2>
+        <p className="section-label">Experience</p>
+        <h2 className="section-title">Where I've worked.</h2>
         <p className="section-subtitle">
-          From academic foundations to production AI systems and shipping iOS apps —
-          a progression focused on intelligent, scalable software.
+          A progression from foundational IT work to building production AI systems
+          and shipping iOS apps.
         </p>
 
         <div className={styles.timeline}>

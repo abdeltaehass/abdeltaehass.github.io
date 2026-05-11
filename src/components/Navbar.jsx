@@ -2,16 +2,16 @@ import { useState, useEffect } from 'react'
 import styles from './Navbar.module.css'
 
 const links = [
-  { label: 'Home', href: '#home' },
   { label: 'Projects', href: '#projects' },
   { label: 'Experience', href: '#experience' },
   { label: 'About', href: '#about' },
+  { label: 'Contact', href: '#contact' },
 ]
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
-  const [active, setActive] = useState('#home')
+  const [active, setActive] = useState('')
   const [progress, setProgress] = useState(0)
 
   useEffect(() => {
@@ -55,9 +55,8 @@ export default function Navbar() {
       <div className={styles.progress} style={{ transform: `scaleX(${progress})` }} />
       <div className={styles.inner}>
         <a href="#home" className={styles.logo}>
-          <span className={styles.logoBracket}>[</span>
-          <span className={styles.logoText}>ABDEL_R</span>
-          <span className={styles.logoBracket}>]</span>
+          <span className={styles.logoMark}>AR</span>
+          <span className={styles.logoName}>Abdel Rahman</span>
         </a>
 
         <ul className={styles.links}>

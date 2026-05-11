@@ -25,13 +25,11 @@ export default function Contact() {
     <>
       <section id="contact" className={styles.section}>
         <div className="container reveal" ref={ref}>
-          <p className="section-label">INITIATE CONTACT</p>
-          <h2 className="section-title">
-            Let's build something <span className="accent-text">together</span>.
-          </h2>
+          <p className="section-label">Contact</p>
+          <h2 className="section-title">Let's talk.</h2>
           <p className="section-subtitle">
-            Open to new roles, collaborations, and conversations about
-            AI agents, ML pipelines, or shipping iOS apps. My inbox is open.
+            Open to new roles and collaborations — feel free to reach out about
+            AI agents, ML pipelines, or anything in between.
           </p>
           <div className={styles.links}>
             {socials.map(s => (
@@ -51,8 +49,7 @@ export default function Contact() {
       </section>
       <footer className={styles.footer}>
         <div className={`container ${styles.footerInner}`}>
-          <span className={styles.footerLogo}>[ABDEL_R] · v2.0</span>
-          <span className={styles.footerCenter}>© 2026 Abdel Rahman Taeha. All rights reserved.</span>
+          <span className={styles.footerLeft}>© {new Date().getFullYear()} Abdel Rahman Taeha</span>
           <div className={styles.footerLinks}>
             <a href="https://github.com/abdeltaehass" target="_blank" rel="noopener noreferrer">GitHub</a>
             <a href="https://www.linkedin.com/in/abdel-rahman-taeha-9113b320b/" target="_blank" rel="noopener noreferrer">LinkedIn</a>

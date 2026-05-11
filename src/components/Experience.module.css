@@ -1,10 +1,10 @@
 .timeline {
   position: relative;
   padding-left: 28px;
-  border-left: 1px solid var(--border-strong);
+  border-left: 1px solid var(--border);
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 18px;
   margin-top: 12px;
 }
 
@@ -14,13 +14,13 @@
 
 .dot {
   position: absolute;
-  left: -34px;
-  top: 24px;
-  width: 11px;
-  height: 11px;
+  left: -33px;
+  top: 26px;
+  width: 9px;
+  height: 9px;
   border-radius: 50%;
   background: var(--accent);
-  box-shadow: 0 0 0 4px var(--bg), 0 0 14px var(--accent-glow);
+  box-shadow: 0 0 0 4px var(--bg);
 }
 
 .card {
@@ -28,13 +28,13 @@
   border: 1px solid var(--border);
   border-radius: 14px;
   padding: 22px 26px;
-  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+  transition: border-color 0.2s, transform 0.2s, background 0.2s;
 }
 
 .card:hover {
-  border-color: var(--accent);
+  border-color: var(--border-strong);
+  background: var(--bg-card-hover);
   transform: translateX(2px);
-  box-shadow: 0 12px 30px -16px var(--accent-glow);
 }
 
 .header {
@@ -46,37 +46,33 @@
 }
 
 .role {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--accent);
-  letter-spacing: -0.005em;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: -0.01em;
 }
 
 .period {
   font-family: var(--font-mono);
-  font-size: 0.7rem;
-  color: var(--accent);
-  background: var(--accent-dim);
-  border: 1px solid var(--accent);
-  padding: 4px 12px;
-  border-radius: 100px;
-  letter-spacing: 0.08em;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  padding: 3px 10px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
 }
 
 .company {
-  font-family: var(--font-mono);
-  font-size: 0.78rem;
-  color: var(--text-muted);
-  margin-top: 6px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  font-size: 0.88rem;
+  color: var(--accent);
+  margin-top: 4px;
+  font-weight: 500;
 }
 
 .location {
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
+  font-size: 0.78rem;
   color: var(--text-subtle);
-  margin-top: 4px;
+  margin-top: 2px;
 }
 
 .points {
@@ -91,17 +87,18 @@
   font-size: 0.9rem;
   color: var(--text-muted);
   line-height: 1.6;
-  padding-left: 18px;
+  padding-left: 16px;
   position: relative;
 }
 
 .points li::before {
-  content: '▸';
+  content: '';
   position: absolute;
   left: 0;
-  color: var(--accent);
-  font-size: 0.7rem;
-  top: 5px;
+  top: 11px;
+  width: 4px;
+  height: 1px;
+  background: var(--text-subtle);
 }
 
 /* Bottom stats grid */
@@ -116,28 +113,28 @@
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: 12px;
-  padding: 22px 20px;
+  padding: 22px 22px;
   display: flex;
   flex-direction: column;
   gap: 6px;
-  transition: border-color 0.2s, transform 0.2s;
+  transition: border-color 0.2s, background 0.2s;
 }
 
 .statBox:hover {
-  border-color: var(--accent);
-  transform: translateY(-2px);
+  border-color: var(--border-strong);
+  background: var(--bg-card-hover);
 }
 
 .statLabel {
   font-family: var(--font-mono);
-  font-size: 0.68rem;
-  color: var(--accent);
-  letter-spacing: 0.14em;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
 }
 
 .statValue {
-  font-size: 2rem;
-  font-weight: 800;
+  font-size: 1.9rem;
+  font-weight: 600;
   color: var(--text);
   letter-spacing: -0.02em;
   line-height: 1.1;
@@ -145,8 +142,8 @@
 
 .statSub {
   font-size: 0.78rem;
-  color: var(--text-muted);
-  line-height: 1.4;
+  color: var(--text-subtle);
+  line-height: 1.45;
 }
 
 @media (max-width: 800px) {

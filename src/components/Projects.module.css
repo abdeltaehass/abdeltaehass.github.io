@@ -1,7 +1,7 @@
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
 }
 
 .card {
@@ -11,15 +11,15 @@
   padding: 24px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  transition: border-color 0.2s, transform 0.4s ease, box-shadow 0.3s;
+  gap: 14px;
+  transition: border-color 0.25s, transform 0.4s ease, background 0.25s;
   transform-style: preserve-3d;
   will-change: transform;
 }
 
 .card:hover {
-  border-color: var(--accent);
-  box-shadow: 0 20px 40px -20px var(--accent-glow);
+  border-color: var(--border-strong);
+  background: var(--bg-card-hover);
 }
 
 .cardTop {
@@ -29,14 +29,14 @@
 }
 
 .folderIcon {
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
   color: var(--accent);
 }
 
 .cardLinks {
   display: flex;
-  gap: 12px;
+  gap: 14px;
   color: var(--text-muted);
 }
 
@@ -45,17 +45,18 @@
 }
 
 .cardLinks a:hover {
-  color: var(--accent);
-}
-
-.projectName {
-  font-size: 1rem;
-  font-weight: 700;
   color: var(--text);
 }
 
+.projectName {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
 .projectDesc {
-  font-size: 0.875rem;
+  font-size: 0.9rem;
   color: var(--text-muted);
   line-height: 1.6;
   flex: 1;
@@ -64,35 +65,36 @@
 .tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 6px;
   margin-top: 4px;
 }
 
 .tag {
   font-family: var(--font-mono);
   font-size: 0.7rem;
-  color: var(--accent);
-  background: var(--accent-dim);
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
   padding: 3px 10px;
-  border-radius: 100px;
+  border-radius: 6px;
 }
 
 .more {
-  margin-top: 40px;
+  margin-top: 44px;
   text-align: center;
 }
 
 .moreLink {
-  font-family: var(--font-mono);
-  font-size: 0.85rem;
+  font-size: 0.88rem;
   color: var(--text-muted);
   border: 1px solid var(--border);
-  padding: 10px 24px;
+  padding: 9px 22px;
   border-radius: 8px;
-  transition: color 0.2s, border-color 0.2s;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
 }
 
 .moreLink:hover {
-  color: var(--accent);
-  border-color: var(--accent);
+  color: var(--text);
+  border-color: var(--border-strong);
+  background: rgba(255, 255, 255, 0.03);
 }

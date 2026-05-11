@@ -16,32 +16,30 @@
   border: 1px solid var(--border);
   border-radius: 12px;
   padding: 20px 22px;
-  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+  transition: border-color 0.2s, background 0.2s, transform 0.2s;
 }
 
 .socialCard:hover {
-  border-color: var(--accent);
-  transform: translateY(-3px);
-  box-shadow: 0 16px 36px -18px var(--accent-glow);
+  border-color: var(--border-strong);
+  background: var(--bg-card-hover);
+  transform: translateY(-2px);
 }
 
 .socialLabel {
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  color: var(--accent);
-  letter-spacing: 0.14em;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-weight: 500;
 }
 
 .socialHandle {
   font-size: 0.92rem;
   color: var(--text);
-  font-weight: 500;
 }
 
 .footer {
   border-top: 1px solid var(--border);
   padding: 22px 0;
-  background: var(--bg-surface);
+  background: var(--bg);
 }
 
 .footerInner {
@@ -50,26 +48,17 @@
   justify-content: space-between;
   gap: 20px;
   flex-wrap: wrap;
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: 0.84rem;
+  color: var(--text-muted);
+}
+
+.footerLeft {
   color: var(--text-subtle);
-  letter-spacing: 0.06em;
-}
-
-.footerLogo {
-  color: var(--accent);
-  font-weight: 600;
-}
-
-.footerCenter {
-  text-align: center;
-  flex: 1;
-  min-width: 220px;
 }
 
 .footerLinks {
   display: flex;
-  gap: 18px;
+  gap: 20px;
 }
 
 .footerLinks a {
@@ -78,7 +67,7 @@
 }
 
 .footerLinks a:hover {
-  color: var(--accent);
+  color: var(--text);
 }
 
 @media (max-width: 800px) {

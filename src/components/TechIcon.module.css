@@ -4,10 +4,11 @@
   gap: 6px;
   font-family: var(--font-mono);
   font-size: 0.7rem;
-  color: var(--accent);
-  background: var(--accent-dim);
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
   padding: 4px 10px;
-  border-radius: 100px;
+  border-radius: 6px;
   line-height: 1;
 }
 
@@ -15,4 +16,5 @@
   width: 12px;
   height: 12px;
   display: inline-block;
+  opacity: 0.85;
 }

@@ -5,30 +5,30 @@ const capabilities = [
   {
     title: 'Machine Learning',
     description: 'Building autonomous AI agents and ML pipelines for production. Focused on PyTorch, LangChain, and RAG systems with self-correction logic.',
-    tags: ['NEURAL NETWORKS', 'AGENT SYSTEMS', 'RAG'],
+    tags: ['Neural Networks', 'Agent Systems', 'RAG'],
     icon: (
-      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.5">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.5">
         <circle cx="12" cy="12" r="3" />
         <path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2" strokeLinecap="round" />
       </svg>
     ),
   },
   {
-    title: 'Cloud Systems',
-    description: 'Resilient, distributed infrastructure on AWS and GCP. Skilled at orchestrating large-scale data pipelines, CI/CD automation, and cloud-native deployments.',
-    tags: ['AWS / GCP', 'CI/CD', 'ETL PIPELINES'],
+    title: 'Cloud & Infra',
+    description: 'Resilient, distributed infrastructure on AWS and GCP. Skilled at large-scale data pipelines, CI/CD automation, and cloud-native deployments.',
+    tags: ['AWS / GCP', 'CI/CD', 'ETL Pipelines'],
     icon: (
-      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.5">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.5">
         <path d="M7 18a5 5 0 110-10 7 7 0 0113.95 1.5A4 4 0 0119 18H7z" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     ),
   },
   {
     title: 'Full-Stack & Mobile',
-    description: 'Production iOS apps with Flutter & Dart, modern web platforms with React, and end-to-end ownership from UI/UX design to App Store distribution.',
-    tags: ['FLUTTER', 'REACT', 'XCODE CLOUD'],
+    description: 'Production iOS apps with Flutter & Dart, modern web platforms with React, and end-to-end ownership from UI/UX to App Store distribution.',
+    tags: ['Flutter', 'React', 'Xcode Cloud'],
     icon: (
-      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.5">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.5">
         <rect x="5" y="2" width="14" height="20" rx="2" />
         <path d="M11 18h2" strokeLinecap="round" />
       </svg>
@@ -41,36 +41,34 @@ export default function About() {
   return (
     <section id="about" className={styles.about}>
       <div className={`container reveal`} ref={ref}>
+        <p className="section-label">About</p>
+        <h2 className="section-title">A little about me.</h2>
+
         <div className={styles.layout}>
           <div className={styles.left}>
-            <div className={styles.statusPill}>
-              <span className={styles.dot} />
-              SYSTEM ACTIVE · OPEN TO OPPORTUNITIES
-            </div>
-            <h2 className={styles.heading}>
-              ENGINEERING<br />
-              <span className={styles.accentHeading}>INTELLIGENT SYSTEMS.</span>
-            </h2>
             <p className={styles.bio}>
-              Software Engineer at DHCS by day, founder of Al-Manar by passion.
-              I build autonomous AI agents and ETL pipelines that bridge enterprise
-              systems with downstream analytics. CS grad from Sacramento State,
-              MS candidate at Georgia Tech (Machine Learning concentration).
-              I care about clean architecture, reliable data, and shipping things
-              that work.
+              I'm a Software Engineer at DHCS by day and founder of Al-Manar by passion.
+              My work focuses on autonomous AI agents and ETL pipelines that bridge
+              enterprise systems with downstream analytics — making data more reliable
+              and decisions faster.
+            </p>
+            <p className={styles.bio}>
+              I hold a BS in Computer Science from Sacramento State and I'm pursuing an
+              MS in Computer Science (Machine Learning concentration) at Georgia Tech.
+              Outside of work, I'm studying for CCNA, CompTIA Security+, Network+, and A+.
             </p>
             <div className={styles.metaRow}>
               <div className={styles.meta}>
-                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.5">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="1.5">
                   <rect x="3" y="5" width="18" height="16" rx="2" /><path d="M3 9h18M8 3v4M16 3v4" strokeLinecap="round" />
                 </svg>
-                EST. 2022
+                Based in Sacramento, CA
               </div>
               <div className={styles.meta}>
-                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.5">
-                  <circle cx="12" cy="10" r="3" /><path d="M12 22s7-7 7-12a7 7 0 10-14 0c0 5 7 12 7 12z" strokeLinejoin="round" />
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" strokeLinecap="round" />
                 </svg>
-                SACRAMENTO, CA
+                Open to opportunities
               </div>
             </div>
             <a
@@ -79,7 +77,7 @@ export default function About() {
               rel="noopener noreferrer"
               className={styles.resumeBtn}
             >
-              Download Full Resume ↗
+              Download Resume →
             </a>
           </div>
           <div className={styles.photoWrap}>
@@ -94,7 +92,7 @@ export default function About() {
         </div>
 
         <div className={styles.capSection}>
-          <p className={styles.capLabel}>CORE CAPABILITIES</p>
+          <p className={styles.capLabel}>Core Capabilities</p>
           <div className={styles.capGrid}>
             {capabilities.map(c => (
               <div key={c.title} className={styles.capCard}>
@@ -103,9 +101,7 @@ export default function About() {
                 <p className={styles.capDesc}>{c.description}</p>
                 <div className={styles.capTags}>
                   {c.tags.map(t => (
-                    <span key={t} className={styles.capTag}>
-                      <span className={styles.capTagDot}>•</span> {t}
-                    </span>
+                    <span key={t} className={styles.capTag}>{t}</span>
                   ))}
                 </div>
               </div>
