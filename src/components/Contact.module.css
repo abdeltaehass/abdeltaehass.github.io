@@ -1,5 +1,5 @@
 .section {
-  padding: 80px 0 60px;
+  padding: 100px 0 60px;
 }
 
 .links {
@@ -16,19 +16,17 @@
   border: 1px solid var(--border);
   border-radius: 12px;
   padding: 20px 22px;
-  transition: border-color 0.2s, background 0.2s, transform 0.2s;
+  transition: border-color 0.2s, background 0.2s;
 }
 
 .socialCard:hover {
   border-color: var(--border-strong);
   background: var(--bg-card-hover);
-  transform: translateY(-2px);
 }
 
 .socialLabel {
   font-size: 0.78rem;
   color: var(--text-muted);
-  font-weight: 500;
 }
 
 .socialHandle {

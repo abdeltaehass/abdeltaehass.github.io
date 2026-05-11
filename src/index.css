@@ -5,19 +5,18 @@
 }
 
 :root {
-  --bg: #0b0d10;
-  --bg-surface: #101317;
-  --bg-card: #14181d;
-  --bg-card-hover: #181d23;
-  --border: #1f242b;
-  --border-strong: #2a3138;
-  --accent: #6aa8ff;
-  --accent-bright: #8cbcff;
-  --accent-dim: rgba(106, 168, 255, 0.10);
-  --accent-glow: rgba(106, 168, 255, 0.25);
-  --text: #e7ebef;
-  --text-muted: #9aa3ad;
-  --text-subtle: #5e6770;
+  --bg: #ffffff;
+  --bg-surface: #fafafa;
+  --bg-card: #ffffff;
+  --bg-card-hover: #fafafa;
+  --border: #ececec;
+  --border-strong: #d8d8d8;
+  --accent: #0a0a0a;
+  --accent-bright: #1a1a1a;
+  --accent-dim: #f4f4f5;
+  --text: #0a0a0a;
+  --text-muted: #525252;
+  --text-subtle: #8e8e93;
   --font-mono: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
 }
@@ -32,7 +31,7 @@ body {
   font-family: var(--font-sans);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
-  font-feature-settings: 'cv11', 'ss01';
+  -moz-osx-font-smoothing: grayscale;
 }
 
 a {
@@ -41,51 +40,48 @@ a {
 }
 
 section {
-  padding: 96px 0;
+  padding: 100px 0;
 }
 
 .container {
-  max-width: 1080px;
+  max-width: 960px;
   margin: 0 auto;
   padding: 0 24px;
 }
 
 .section-label {
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  color: var(--accent);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  margin-bottom: 14px;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+  margin-bottom: 12px;
   font-weight: 500;
 }
 
 .section-title {
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-weight: 600;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
   color: var(--text);
-  letter-spacing: -0.02em;
+  letter-spacing: -0.025em;
   line-height: 1.15;
 }
 
 .section-subtitle {
   color: var(--text-muted);
-  font-size: 1.02rem;
-  max-width: 600px;
+  font-size: 1rem;
+  max-width: 580px;
   margin-bottom: 56px;
-  line-height: 1.65;
+  line-height: 1.6;
 }
 
 .accent-text {
-  color: var(--accent);
-  font-weight: 600;
+  color: var(--text);
 }
 
 /* Scroll reveal */
 .reveal {
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(16px);
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
@@ -95,11 +91,10 @@ section {
 }
 
 ::selection {
-  background: var(--accent-dim);
-  color: var(--accent-bright);
+  background: #e5e5e7;
 }
 
 @media (max-width: 600px) {
   section { padding: 64px 0; }
-  .section-title { font-size: 1.6rem; }
+  .section-title { font-size: 1.5rem; }
 }

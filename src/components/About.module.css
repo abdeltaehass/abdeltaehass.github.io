@@ -7,19 +7,19 @@
   grid-template-columns: 1.4fr 1fr;
   gap: 56px;
   align-items: center;
-  margin-top: 24px;
+  margin-top: 16px;
 }
 
 .left {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 16px;
 }
 
 .bio {
   font-size: 0.98rem;
   color: var(--text-muted);
-  line-height: 1.75;
+  line-height: 1.7;
   max-width: 580px;
 }
 
@@ -27,7 +27,7 @@
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
-  margin-top: 4px;
+  margin-top: 6px;
 }
 
 .meta {
@@ -44,20 +44,17 @@
   gap: 6px;
   font-size: 0.88rem;
   font-weight: 500;
-  color: var(--text);
-  border: 1px solid var(--border-strong);
-  background: rgba(255, 255, 255, 0.03);
-  padding: 9px 20px;
-  border-radius: 8px;
+  color: var(--bg);
+  background: var(--text);
+  padding: 10px 22px;
+  border-radius: 100px;
   width: fit-content;
-  margin-top: 8px;
-  transition: background 0.2s, border-color 0.2s;
+  margin-top: 10px;
+  transition: opacity 0.2s;
 }
 
 .resumeBtn:hover {
-  background: var(--accent);
-  border-color: var(--accent);
-  color: #0b0d10;
+  opacity: 0.85;
 }
 
 /* Photo */
@@ -69,18 +66,18 @@
 
 .photoFrame {
   position: relative;
-  border-radius: 14px;
+  border-radius: 12px;
   overflow: hidden;
   border: 1px solid var(--border);
   background: var(--bg-card);
   aspect-ratio: 4 / 5;
   width: 100%;
-  max-width: 320px;
+  max-width: 300px;
   transition: transform 0.3s, border-color 0.3s;
 }
 
 .photoFrame:hover {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
   border-color: var(--border-strong);
 }
 
@@ -99,8 +96,7 @@
 .capLabel {
   font-size: 0.78rem;
   color: var(--text-muted);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  letter-spacing: 0.04em;
   margin-bottom: 16px;
   padding-bottom: 12px;
   border-bottom: 1px solid var(--border);
@@ -129,11 +125,11 @@
 }
 
 .capIcon {
-  width: 32px;
-  height: 32px;
+  width: 30px;
+  height: 30px;
   border-radius: 8px;
   background: var(--accent-dim);
-  color: var(--accent);
+  color: var(--text);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -141,7 +137,7 @@
 }
 
 .capTitle {
-  font-size: 1.02rem;
+  font-size: 1rem;
   font-weight: 600;
   color: var(--text);
   letter-spacing: -0.01em;
@@ -162,10 +158,9 @@
 }
 
 .capTag {
-  font-family: var(--font-mono);
-  font-size: 0.68rem;
+  font-size: 0.7rem;
   color: var(--text-muted);
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--bg-surface);
   border: 1px solid var(--border);
   padding: 3px 9px;
   border-radius: 6px;
@@ -176,6 +171,6 @@
     grid-template-columns: 1fr;
     gap: 36px;
   }
-  .photoFrame { max-width: 280px; }
+  .photoFrame { max-width: 260px; }
   .capGrid { grid-template-columns: 1fr; }
 }

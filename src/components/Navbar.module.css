@@ -4,20 +4,20 @@
   left: 0;
   right: 0;
   z-index: 100;
-  padding: 14px 24px;
+  padding: 16px 24px;
   transition: background 0.3s, border-color 0.3s, backdrop-filter 0.3s;
   border-bottom: 1px solid transparent;
 }
 
 .nav.scrolled {
-  background: rgba(11, 13, 16, 0.78);
-  backdrop-filter: blur(16px) saturate(160%);
-  -webkit-backdrop-filter: blur(16px) saturate(160%);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(14px) saturate(160%);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
   border-color: var(--border);
 }
 
 .inner {
-  max-width: 1080px;
+  max-width: 960px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -37,20 +37,20 @@
 }
 
 .logo:hover {
-  opacity: 0.85;
+  opacity: 0.7;
 }
 
 .logoMark {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 28px;
-  height: 28px;
-  border-radius: 8px;
-  background: linear-gradient(135deg, var(--accent), #4a8de0);
-  color: #0b0d10;
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+  background: var(--text);
+  color: var(--bg);
   font-weight: 700;
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   letter-spacing: 0.02em;
 }
 
@@ -71,13 +71,12 @@
   color: var(--text-muted);
   padding: 7px 14px;
   border-radius: 8px;
-  transition: color 0.2s, background 0.2s;
+  transition: color 0.2s;
   font-weight: 500;
 }
 
 .link:hover {
   color: var(--text);
-  background: rgba(255, 255, 255, 0.03);
 }
 
 .linkActive {
@@ -88,18 +87,15 @@
 .resumeBtn {
   font-size: 0.88rem;
   font-weight: 500;
-  color: var(--text);
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid var(--border-strong);
+  color: var(--bg);
+  background: var(--text);
   padding: 7px 18px;
-  border-radius: 8px;
-  transition: background 0.2s, border-color 0.2s, color 0.2s;
+  border-radius: 100px;
+  transition: opacity 0.2s, transform 0.2s;
 }
 
 .resumeBtn:hover {
-  background: var(--accent);
-  border-color: var(--accent);
-  color: #0b0d10;
+  opacity: 0.85;
 }
 
 /* Progress bar */
@@ -109,7 +105,7 @@
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(90deg, var(--accent), transparent);
+  background: var(--text);
   transform-origin: left center;
   transform: scaleX(0);
 }
@@ -142,7 +138,7 @@
 .mobileMenu {
   display: none;
   flex-direction: column;
-  background: rgba(11, 13, 16, 0.97);
+  background: rgba(255, 255, 255, 0.98);
   border-top: 1px solid var(--border);
   max-height: 0;
   overflow: hidden;
@@ -158,12 +154,11 @@
   color: var(--text-muted);
   padding: 14px 24px;
   border-bottom: 1px solid var(--border);
-  transition: color 0.2s, background 0.2s;
+  transition: color 0.2s;
 }
 
 .mobileLink:hover {
   color: var(--text);
-  background: rgba(255, 255, 255, 0.03);
 }
 
 @media (max-width: 720px) {

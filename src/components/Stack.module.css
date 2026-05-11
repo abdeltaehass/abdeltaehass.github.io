@@ -3,13 +3,11 @@
 }
 
 .title {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: 600;
   color: var(--text);
-  margin-bottom: 28px;
-  letter-spacing: -0.01em;
-  display: inline-block;
-  position: relative;
+  margin-bottom: 24px;
+  letter-spacing: -0.02em;
 }
 
 .underline {
@@ -25,46 +23,34 @@
 .card {
   background: var(--bg-card);
   border: 1px solid var(--border);
-  border-radius: 14px;
+  border-radius: 12px;
   padding: 24px;
   display: flex;
   flex-direction: column;
   gap: 12px;
-  transition: border-color 0.25s, transform 0.25s, background 0.25s;
+  transition: border-color 0.2s, background 0.2s;
 }
 
 .card:hover {
   border-color: var(--border-strong);
-  transform: translateY(-2px);
   background: var(--bg-card-hover);
 }
 
 .cardHeader {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  letter-spacing: 0.08em;
-}
-
-.num {
-  color: var(--text-subtle);
-  font-weight: 500;
-}
-
-.slash {
+  gap: 8px;
+  font-size: 0.72rem;
   color: var(--text-subtle);
 }
 
-.label {
-  color: var(--text-muted);
-  text-transform: uppercase;
+.num, .slash, .label {
+  color: var(--text-subtle);
 }
 
 .iconBox {
   margin-left: auto;
-  color: var(--accent);
+  color: var(--text);
   background: var(--accent-dim);
   padding: 7px;
   border-radius: 8px;
@@ -74,10 +60,9 @@
 }
 
 .cardTitle {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: 600;
   color: var(--text);
-  margin-top: 6px;
   letter-spacing: -0.01em;
 }
 
@@ -92,16 +77,15 @@
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
-  margin-top: 8px;
+  margin-top: 4px;
 }
 
 .tag {
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
+  font-size: 0.72rem;
   color: var(--text-muted);
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--bg-surface);
   border: 1px solid var(--border);
-  padding: 3px 10px;
+  padding: 3px 9px;
   border-radius: 6px;
 }
 

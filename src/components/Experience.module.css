@@ -1,11 +1,11 @@
 .timeline {
   position: relative;
-  padding-left: 28px;
+  padding-left: 24px;
   border-left: 1px solid var(--border);
   display: flex;
   flex-direction: column;
-  gap: 18px;
-  margin-top: 12px;
+  gap: 14px;
+  margin-top: 8px;
 }
 
 .item {
@@ -14,27 +14,26 @@
 
 .dot {
   position: absolute;
-  left: -33px;
+  left: -29px;
   top: 26px;
-  width: 9px;
-  height: 9px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
-  background: var(--accent);
-  box-shadow: 0 0 0 4px var(--bg);
+  background: var(--text);
+  box-shadow: 0 0 0 3px var(--bg);
 }
 
 .card {
   background: var(--bg-card);
   border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 22px 26px;
-  transition: border-color 0.2s, transform 0.2s, background 0.2s;
+  border-radius: 12px;
+  padding: 20px 24px;
+  transition: border-color 0.2s, background 0.2s;
 }
 
 .card:hover {
   border-color: var(--border-strong);
   background: var(--bg-card-hover);
-  transform: translateX(2px);
 }
 
 .header {
@@ -46,27 +45,21 @@
 }
 
 .role {
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-weight: 600;
   color: var(--text);
   letter-spacing: -0.01em;
 }
 
 .period {
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  color: var(--text-muted);
-  padding: 3px 10px;
-  border-radius: 6px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid var(--border);
+  font-size: 0.74rem;
+  color: var(--text-subtle);
 }
 
 .company {
   font-size: 0.88rem;
-  color: var(--accent);
+  color: var(--text-muted);
   margin-top: 4px;
-  font-weight: 500;
 }
 
 .location {
@@ -79,15 +72,15 @@
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  margin-top: 14px;
+  gap: 6px;
+  margin-top: 12px;
 }
 
 .points li {
   font-size: 0.9rem;
   color: var(--text-muted);
   line-height: 1.6;
-  padding-left: 16px;
+  padding-left: 14px;
   position: relative;
 }
 
@@ -103,7 +96,7 @@
 
 /* Bottom stats grid */
 .statsGrid {
-  margin-top: 56px;
+  margin-top: 48px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 14px;
@@ -113,37 +106,34 @@
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: 12px;
-  padding: 22px 22px;
+  padding: 22px;
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  transition: border-color 0.2s, background 0.2s;
+  gap: 4px;
 }
 
 .statBox:hover {
   border-color: var(--border-strong);
-  background: var(--bg-card-hover);
 }
 
 .statLabel {
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  color: var(--text-muted);
-  letter-spacing: 0.08em;
+  font-size: 0.72rem;
+  color: var(--text-subtle);
+  letter-spacing: 0.04em;
 }
 
 .statValue {
-  font-size: 1.9rem;
+  font-size: 1.85rem;
   font-weight: 600;
   color: var(--text);
-  letter-spacing: -0.02em;
+  letter-spacing: -0.025em;
   line-height: 1.1;
 }
 
 .statSub {
   font-size: 0.78rem;
   color: var(--text-subtle);
-  line-height: 1.45;
+  line-height: 1.5;
 }
 
 @media (max-width: 800px) {
