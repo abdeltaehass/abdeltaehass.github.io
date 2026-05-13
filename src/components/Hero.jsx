@@ -13,9 +13,9 @@ export default function Hero() {
           and shipping production software.
         </h1>
         <p className={styles.sub}>
-          I'm Abdel Rahman — a Software Engineer at DHCS focused on autonomous AI agents,
-          ML pipelines, and full-stack systems. CS grad from Sacramento State, MS candidate
-          at Georgia Tech (Machine Learning).
+          I'm Abdel Rahman — a Software Engineer at DHCS and AI Research Student
+          working on agent evaluation benchmarks (MedInsider, SpineFairBench).
+          CS grad from Sacramento State, MS candidate at Georgia Tech (Machine Learning).
         </p>
         <div className={styles.actions}>
           <a href="#projects" className={styles.primary}>View my work</a>

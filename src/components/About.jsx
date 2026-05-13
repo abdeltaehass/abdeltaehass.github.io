@@ -47,15 +47,16 @@ export default function About() {
         <div className={styles.layout}>
           <div className={styles.left}>
             <p className={styles.bio}>
-              I'm a Software Engineer at DHCS by day and founder of Al-Manar by passion.
-              My work focuses on autonomous AI agents and ETL pipelines that bridge
-              enterprise systems with downstream analytics — making data more reliable
-              and decisions faster.
+              I'm a Software Engineer at DHCS and an AI Research Student contributing
+              to benchmarks like MedInsider and SpineFairBench. My work focuses on
+              autonomous AI agents, ML evaluation infrastructure, and reliable data
+              pipelines — making intelligent systems easier to audit and trust.
             </p>
             <p className={styles.bio}>
               I hold a BS in Computer Science from Sacramento State and I'm pursuing an
               MS in Computer Science (Machine Learning concentration) at Georgia Tech.
-              Outside of work, I'm studying for CCNA, CompTIA Security+, Network+, and A+.
+              Outside of work, I also ship iOS apps and study for CCNA, CompTIA Security+,
+              Network+, and A+.
             </p>
             <div className={styles.metaRow}>
               <div className={styles.meta}>
