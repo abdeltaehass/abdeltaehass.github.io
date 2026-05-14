@@ -6,9 +6,11 @@ import styles from './Projects.module.css'
 const projects = [
   {
     name: 'SpineFairBench',
-    description: 'Counterfactual benchmark for auditing demographic sensitivity in spinal radiology VLM reports. Co-authored and submitted to NeurIPS 2026 (under review). Trained a neutral baseline model and built data collection pipelines to analyze bias in VLM outputs.',
-    tags: ['Python', 'PyTorch', 'VLM', 'Research'],
-    github: null,
+    description: 'A paired counterfactual benchmark for auditing demographic sensitivity in spinal-radiology VLM reports. Evaluated 9 frozen VLMs across 7,996 source/counterfactual pairs (apparent age and sex edited under target-pathology preservation). Recommendation drift observed in all 9 models; 443/450 stratified pairs (98.4%) passed blinded review by three board-certified radiologists.',
+    tags: ['Python', 'PyTorch', 'Stable Diffusion', 'LoRA', 'VLM'],
+    github: 'https://github.com/ahmedtaha100/SpineFairBench',
+    paper: 'https://www.researchgate.net/publication/404620116_SpineFairBench_A_Counterfactual_Benchmark_for_Auditing_Demographic_Sensitivity_in_Spinal_Radiology_VLM_Reports',
+    dataset: 'https://huggingface.co/datasets/ahmedtaha100/spinefairbench-artifacts',
     live: null,
     badge: 'NeurIPS 2026 · Under Review',
   },
@@ -98,6 +100,21 @@ function ProjectCard({ project }) {
           </svg>
         )}
         <div className={styles.cardLinks}>
+          {project.paper && (
+            <a href={project.paper} target="_blank" rel="noopener noreferrer" title="Paper">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" width="18" height="18">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+              </svg>
+            </a>
+          )}
+          {project.dataset && (
+            <a href={project.dataset} target="_blank" rel="noopener noreferrer" title="Dataset">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" width="18" height="18">
+                <ellipse cx="12" cy="5" rx="8" ry="2.5" />
+                <path strokeLinecap="round" d="M4 5v6c0 1.38 3.58 2.5 8 2.5s8-1.12 8-2.5V5M4 11v6c0 1.38 3.58 2.5 8 2.5s8-1.12 8-2.5v-6" />
+              </svg>
+            </a>
+          )}
           {project.live && (
             <a href={project.live} target="_blank" rel="noopener noreferrer" title="Live demo">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" width="18" height="18">
