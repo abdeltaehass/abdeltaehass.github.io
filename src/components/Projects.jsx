@@ -5,24 +5,6 @@ import styles from './Projects.module.css'
 
 const projects = [
   {
-    name: 'SpineFairBench',
-    description: 'A paired counterfactual benchmark for auditing demographic sensitivity in spinal-radiology VLM reports. Evaluated 9 frozen VLMs across 7,996 source/counterfactual pairs (apparent age and sex edited under target-pathology preservation). Recommendation drift observed in all 9 models; 443/450 stratified pairs (98.4%) passed blinded review by three board-certified radiologists.',
-    tags: ['Python', 'PyTorch', 'Stable Diffusion', 'LoRA', 'VLM'],
-    github: 'https://github.com/ahmedtaha100/SpineFairBench',
-    paper: 'https://www.researchgate.net/publication/404620116_SpineFairBench_A_Counterfactual_Benchmark_for_Auditing_Demographic_Sensitivity_in_Spinal_Radiology_VLM_Reports',
-    dataset: 'https://huggingface.co/datasets/ahmedtaha100/spinefairbench-artifacts',
-    live: null,
-    badge: 'NeurIPS 2026 · Under Review',
-  },
-  {
-    name: 'MedInsider',
-    description: 'FHIR-style benchmark evaluating medical LLM agent integrity under institutional pressure across 840 paired-twin scenarios. Built evaluation and logging infrastructure for agent behavior analysis — deterministic action tracking, auditing workflows, and reproducibility tooling.',
-    tags: ['Python', 'LLM', 'FHIR', 'Research'],
-    github: null,
-    live: null,
-    badge: 'AI Research',
-  },
-  {
     name: 'AutoApply',
     description: 'Automated job application tool that streamlines submitting applications across multiple platforms.',
     tags: ['Python', 'HTML'],

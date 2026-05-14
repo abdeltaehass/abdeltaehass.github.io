@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import styles from './Navbar.module.css'
 
 const links = [
+  { label: 'Research', href: '#research' },
   { label: 'Projects', href: '#projects' },
   { label: 'Experience', href: '#experience' },
   { label: 'About', href: '#about' },
