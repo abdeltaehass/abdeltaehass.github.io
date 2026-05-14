@@ -34,6 +34,17 @@
   color: var(--text);
 }
 
+.badge {
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--text);
+  background: var(--accent-dim);
+  border: 1px solid var(--border);
+  padding: 4px 10px;
+  border-radius: 6px;
+  letter-spacing: 0.01em;
+}
+
 .cardLinks {
   display: flex;
   gap: 14px;

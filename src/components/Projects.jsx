@@ -5,6 +5,22 @@ import styles from './Projects.module.css'
 
 const projects = [
   {
+    name: 'SpineFairBench',
+    description: 'Counterfactual benchmark for auditing demographic sensitivity in spinal radiology VLM reports. Co-authored and submitted to NeurIPS 2026 (under review). Trained a neutral baseline model and built data collection pipelines to analyze bias in VLM outputs.',
+    tags: ['Python', 'PyTorch', 'VLM', 'Research'],
+    github: null,
+    live: null,
+    badge: 'NeurIPS 2026 · Under Review',
+  },
+  {
+    name: 'MedInsider',
+    description: 'FHIR-style benchmark evaluating medical LLM agent integrity under institutional pressure across 840 paired-twin scenarios. Built evaluation and logging infrastructure for agent behavior analysis — deterministic action tracking, auditing workflows, and reproducibility tooling.',
+    tags: ['Python', 'LLM', 'FHIR', 'Research'],
+    github: null,
+    live: null,
+    badge: 'AI Research',
+  },
+  {
     name: 'AutoApply',
     description: 'Automated job application tool that streamlines submitting applications across multiple platforms.',
     tags: ['Python', 'HTML'],
@@ -74,9 +90,13 @@ function ProjectCard({ project }) {
       onMouseLeave={handleLeave}
     >
       <div className={styles.cardTop}>
-        <svg className={styles.folderIcon} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 12.75V12A2.25 2.25 0 014.5 9.75h15A2.25 2.25 0 0121.75 12v.75m-8.69-6.44l-2.12-2.12a1.5 1.5 0 00-1.061-.44H4.5A2.25 2.25 0 002.25 6v8.25A2.25 2.25 0 004.5 16.5h15a2.25 2.25 0 002.25-2.25V9a2.25 2.25 0 00-2.25-2.25h-5.379a1.5 1.5 0 01-1.06-.44z" />
-        </svg>
+        {project.badge ? (
+          <span className={styles.badge}>{project.badge}</span>
+        ) : (
+          <svg className={styles.folderIcon} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 12.75V12A2.25 2.25 0 014.5 9.75h15A2.25 2.25 0 0121.75 12v.75m-8.69-6.44l-2.12-2.12a1.5 1.5 0 00-1.061-.44H4.5A2.25 2.25 0 002.25 6v8.25A2.25 2.25 0 004.5 16.5h15a2.25 2.25 0 002.25-2.25V9a2.25 2.25 0 00-2.25-2.25h-5.379a1.5 1.5 0 01-1.06-.44z" />
+          </svg>
+        )}
         <div className={styles.cardLinks}>
           {project.live && (
             <a href={project.live} target="_blank" rel="noopener noreferrer" title="Live demo">
