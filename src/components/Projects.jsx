@@ -6,8 +6,8 @@ import styles from './Projects.module.css'
 const projects = [
   {
     name: 'AutoApply',
-    description: 'Automated job application tool that streamlines submitting applications across multiple platforms.',
-    tags: ['Python', 'HTML'],
+    description: 'Full-stack job-application toolkit that scrapes CalCareers (and external boards), calls the Claude API to generate tailored resumes, cover letters, and SOQs per posting, scores fit on a 0–100 scale, and tracks every application through a local web dashboard — with a human-in-the-loop review step.',
+    tags: ['Python', 'Claude API', 'Web Scraping', 'Flask'],
     github: 'https://github.com/abdeltaehass/AutoApply',
     live: null,
   },
@@ -20,9 +20,9 @@ const projects = [
   },
   {
     name: 'StockPulse',
-    description: 'A short description of what this project does and what problem it solves.',
-    tags: ['Python', 'HTML', 'C'],
-    github: null,
+    description: 'Real-time stock alerting and trading service built on the Alpaca API — monitors price movements, fires configurable alerts, and executes trades through an automated trader. Containerized with Docker and deployed to a live web dashboard.',
+    tags: ['Python', 'Alpaca API', 'Docker', 'Flask'],
+    github: 'https://github.com/abdeltaehass/stockpulse',
     live: 'http://138.2.225.107:8080',
   },
   {

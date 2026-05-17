@@ -9,7 +9,7 @@ export default function Hero() {
           Available for new opportunities
         </div>
         <h1 className={styles.heading}>
-          Building intelligent systems<br />
+          Building <em className={styles.italic}>intelligent</em> systems<br />
           and shipping production software.
         </h1>
         <p className={styles.sub}>

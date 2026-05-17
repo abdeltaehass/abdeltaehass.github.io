@@ -34,12 +34,20 @@
 }
 
 .heading {
-  font-size: clamp(2.2rem, 5vw, 3.4rem);
-  font-weight: 600;
-  line-height: 1.12;
-  letter-spacing: -0.03em;
+  font-family: var(--font-serif);
+  font-size: clamp(2.4rem, 5.5vw, 3.8rem);
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
   color: var(--text);
-  max-width: 720px;
+  max-width: 760px;
+  font-optical-sizing: auto;
+}
+
+.italic {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--text-muted);
 }
 
 .sub {

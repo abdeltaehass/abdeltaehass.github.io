@@ -5,19 +5,20 @@
 }
 
 :root {
-  --bg: #ffffff;
-  --bg-surface: #fafafa;
+  --bg: #faf8f3;
+  --bg-surface: #f4f1e8;
   --bg-card: #ffffff;
-  --bg-card-hover: #fafafa;
-  --border: #ececec;
-  --border-strong: #d8d8d8;
-  --accent: #0a0a0a;
-  --accent-bright: #1a1a1a;
-  --accent-dim: #f4f4f5;
-  --text: #0a0a0a;
-  --text-muted: #525252;
-  --text-subtle: #8e8e93;
-  --font-mono: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+  --bg-card-hover: #f8f5ec;
+  --border: #e8e2d2;
+  --border-strong: #d4ccb8;
+  --accent: #1a1614;
+  --accent-bright: #2a2520;
+  --accent-dim: #efebde;
+  --text: #1a1614;
+  --text-muted: #6b6358;
+  --text-subtle: #968d80;
+  --font-serif: 'Fraunces', 'Newsreader', 'Georgia', serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
@@ -50,32 +51,38 @@ section {
 }
 
 .section-label {
+  font-family: var(--font-sans);
   font-size: 0.78rem;
   color: var(--text-muted);
-  letter-spacing: 0.02em;
-  margin-bottom: 12px;
+  letter-spacing: 0.04em;
+  margin-bottom: 14px;
   font-weight: 500;
+  text-transform: uppercase;
 }
 
 .section-title {
-  font-size: 2rem;
-  font-weight: 600;
-  margin-bottom: 12px;
+  font-family: var(--font-serif);
+  font-size: 2.4rem;
+  font-weight: 500;
+  margin-bottom: 14px;
   color: var(--text);
-  letter-spacing: -0.025em;
-  line-height: 1.15;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  font-optical-sizing: auto;
 }
 
 .section-subtitle {
   color: var(--text-muted);
-  font-size: 1rem;
-  max-width: 580px;
+  font-size: 1.02rem;
+  max-width: 600px;
   margin-bottom: 56px;
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 .accent-text {
-  color: var(--text);
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 500;
 }
 
 /* Scroll reveal */
@@ -91,10 +98,10 @@ section {
 }
 
 ::selection {
-  background: #e5e5e7;
+  background: var(--accent-dim);
 }
 
 @media (max-width: 600px) {
   section { padding: 64px 0; }
-  .section-title { font-size: 1.5rem; }
+  .section-title { font-size: 1.75rem; }
 }
