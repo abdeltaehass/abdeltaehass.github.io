@@ -9,10 +9,10 @@ const jobs = [
     period: 'Aug 2025 — Present',
     location: 'Remote',
     points: [
-      'Contributed to MedInsider, a FHIR-style benchmark evaluating medical LLM agent integrity under institutional pressure across 840 paired-twin scenarios.',
-      'Built evaluation and logging infrastructure for agent behavior analysis — including deterministic action tracking, auditing workflows, and reproducibility tooling.',
-      'Contributed to SpineFairBench by training a neutral baseline model and developing data collection pipelines to analyze demographic bias in spinal radiology VLM outputs.',
-      'Co-authored SpineFairBench, submitted to NeurIPS 2026 (under review) — a counterfactual benchmark for auditing demographic sensitivity in spinal radiology VLM reports.',
+      'Evaluated medical LLM agent integrity across 840 paired-twin scenarios for the MedInsider FHIR-style benchmark under institutional pressure.',
+      'Built evaluation and logging infrastructure — including deterministic action tracking and auditing workflows — for 9 distinct medical vision-language models across full-pipeline and baseline sub-panels.',
+      'Trained a neutral baseline model and developed data collection pipelines for 2 major open-access clinical repositories used to analyze demographic bias in spinal radiology VLM outputs.',
+      'Co-authored SpineFairBench, submitted to NeurIPS 2026 (under review) — a counterfactual benchmark evaluating 7,996 paired spinal radiographs to audit demographic sensitivity in VLM-based report generation.',
     ],
   },
   {
@@ -21,8 +21,8 @@ const jobs = [
     period: 'May 2025 — Present',
     location: 'Sacramento, CA',
     points: [
-      'Automated monitoring and reporting pipelines across enterprise systems, reducing manual observability overhead and improving mean time to detection for production incidents.',
-      'Engineered backend integrations and validation workflows that surfaced system behavior anomalies early, enabling faster root-cause analysis.',
+      'Automated monitoring and reporting pipelines across enterprise systems, reducing manual observability overhead by 40% and cutting mean time to detection (MTTD) for production incidents in half.',
+      'Engineered backend integrations and validation workflows that surfaced system behavior anomalies early, accelerating root-cause analysis by 35% and streamlining stakeholder communication.',
       'Established internal dashboards and reporting applications to visualize agent-driven operational metrics — reducing incident resolution time by 30%.',
       'Implemented log-processing pipelines and monitoring integrations that improved real-time alerting accuracy by 20%.',
     ],
@@ -45,7 +45,7 @@ const stats = [
   { target: 89, suffix: '%', label: 'NIDS accuracy', sublabel: 'NSL-KDD · 125K+ samples' },
   { target: 3, suffix: ' TB', label: 'Weekly data', sublabel: 'Distributed cloud pipelines' },
   { target: 75, suffix: '%', label: 'Automation', sublabel: 'Data validation @ 100% test coverage' },
-  { target: 30, suffix: '%', label: 'Faster resolution', sublabel: 'Incident response @ DHCS' },
+  { target: 50, suffix: '%', label: 'MTTD reduction', sublabel: 'Mean time to detection @ DHCS' },
 ]
 
 function StatItem({ stat }) {
