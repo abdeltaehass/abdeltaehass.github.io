@@ -44,10 +44,10 @@
   border-radius: 100px;
 }
 
-.status[data-status="Under Review"] {
-  color: #92400e;
-  background: #fef3c7;
-  border-color: #fde68a;
+.status[data-status="Submitted"] {
+  color: #1e3a8a;
+  background: #dbeafe;
+  border-color: #bfdbfe;
 }
 
 .status[data-status="In Progress"] {

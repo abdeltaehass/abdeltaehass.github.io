@@ -1,25 +1,40 @@
+import { useState, useEffect } from 'react'
 import './index.css'
 import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import Stack from './components/Stack'
+import About from './components/About'
 import Research from './components/Research'
 import Projects from './components/Projects'
 import Experience from './components/Experience'
-import About from './components/About'
 import Contact from './components/Contact'
 
+const TABS = ['about', 'research', 'projects', 'experience', 'contact']
+
+function getTabFromHash() {
+  const hash = window.location.hash.replace('#', '')
+  return TABS.includes(hash) ? hash : 'about'
+}
+
 function App() {
+  const [activeTab, setActiveTab] = useState(getTabFromHash)
+
+  useEffect(() => {
+    const onHashChange = () => {
+      setActiveTab(getTabFromHash())
+      window.scrollTo({ top: 0, behavior: 'instant' })
+    }
+    window.addEventListener('hashchange', onHashChange)
+    return () => window.removeEventListener('hashchange', onHashChange)
+  }, [])
+
   return (
     <>
-      <Navbar />
-      <main>
-        <Hero />
-        <Stack />
-        <Research />
-        <Projects />
-        <Experience />
-        <About />
-        <Contact />
+      <Navbar activeTab={activeTab} />
+      <main className="tab-main" key={activeTab}>
+        {activeTab === 'about' && <About />}
+        {activeTab === 'research' && <Research />}
+        {activeTab === 'projects' && <Projects />}
+        {activeTab === 'experience' && <Experience />}
+        {activeTab === 'contact' && <Contact />}
       </main>
     </>
   )

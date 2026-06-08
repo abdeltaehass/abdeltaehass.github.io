@@ -4,20 +4,21 @@
   left: 0;
   right: 0;
   z-index: 100;
-  padding: 16px 24px;
-  transition: background 0.3s, border-color 0.3s, backdrop-filter 0.3s;
+  padding: 18px 24px;
+  transition: background 0.3s, border-color 0.3s, backdrop-filter 0.3s, padding 0.2s;
   border-bottom: 1px solid transparent;
 }
 
 .nav.scrolled {
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(250, 248, 243, 0.85);
   backdrop-filter: blur(14px) saturate(160%);
   -webkit-backdrop-filter: blur(14px) saturate(160%);
   border-color: var(--border);
+  padding: 12px 24px;
 }
 
 .inner {
-  max-width: 960px;
+  max-width: 1060px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -44,34 +45,36 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 26px;
-  height: 26px;
+  width: 28px;
+  height: 28px;
   border-radius: 6px;
   background: var(--text);
   color: var(--bg);
-  font-weight: 700;
-  font-size: 0.7rem;
+  font-weight: 600;
+  font-size: 0.72rem;
   letter-spacing: 0.02em;
+  font-family: var(--font-serif);
 }
 
 .logoName {
   letter-spacing: -0.01em;
 }
 
-/* Nav links */
+/* Tab links */
 .links {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 2px;
   list-style: none;
 }
 
 .link {
+  position: relative;
   font-size: 0.88rem;
   color: var(--text-muted);
-  padding: 7px 14px;
-  border-radius: 8px;
-  transition: color 0.2s;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: color 0.2s, background 0.2s;
   font-weight: 500;
 }
 
@@ -83,31 +86,30 @@
   color: var(--text);
 }
 
+.linkActive::after {
+  content: '';
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 2px;
+  height: 1.5px;
+  background: var(--text);
+  border-radius: 2px;
+}
+
 /* Resume button */
 .resumeBtn {
-  font-size: 0.88rem;
+  font-size: 0.86rem;
   font-weight: 500;
   color: var(--bg);
   background: var(--text);
-  padding: 7px 18px;
+  padding: 8px 18px;
   border-radius: 100px;
-  transition: opacity 0.2s, transform 0.2s;
+  transition: opacity 0.2s;
 }
 
 .resumeBtn:hover {
   opacity: 0.85;
-}
-
-/* Progress bar */
-.progress {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: var(--text);
-  transform-origin: left center;
-  transform: scaleX(0);
 }
 
 /* Hamburger */
@@ -138,7 +140,8 @@
 .mobileMenu {
   display: none;
   flex-direction: column;
-  background: rgba(255, 255, 255, 0.98);
+  background: rgba(250, 248, 243, 0.98);
+  backdrop-filter: blur(10px);
   border-top: 1px solid var(--border);
   max-height: 0;
   overflow: hidden;
@@ -146,19 +149,25 @@
 }
 
 .mobileMenuOpen {
-  max-height: 320px;
+  max-height: 360px;
 }
 
 .mobileLink {
   font-size: 0.95rem;
   color: var(--text-muted);
-  padding: 14px 24px;
+  padding: 15px 24px;
   border-bottom: 1px solid var(--border);
-  transition: color 0.2s;
+  transition: color 0.2s, background 0.2s;
 }
 
 .mobileLink:hover {
   color: var(--text);
+  background: rgba(0, 0, 0, 0.02);
+}
+
+.mobileLinkActive {
+  color: var(--text);
+  font-weight: 600;
 }
 
 @media (max-width: 720px) {

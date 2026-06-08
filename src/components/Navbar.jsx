@@ -2,25 +2,19 @@ import { useState, useEffect } from 'react'
 import styles from './Navbar.module.css'
 
 const links = [
+  { label: 'About', href: '#about' },
   { label: 'Research', href: '#research' },
   { label: 'Projects', href: '#projects' },
   { label: 'Experience', href: '#experience' },
-  { label: 'About', href: '#about' },
   { label: 'Contact', href: '#contact' },
 ]
 
-export default function Navbar() {
+export default function Navbar({ activeTab }) {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
-  const [active, setActive] = useState('')
-  const [progress, setProgress] = useState(0)
 
   useEffect(() => {
-    const onScroll = () => {
-      setScrolled(window.scrollY > 20)
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight
-      setProgress(docHeight > 0 ? Math.min(1, window.scrollY / docHeight) : 0)
-    }
+    const onScroll = () => setScrolled(window.scrollY > 12)
     window.addEventListener('scroll', onScroll, { passive: true })
     onScroll()
     return () => window.removeEventListener('scroll', onScroll)
@@ -32,45 +26,28 @@ export default function Navbar() {
     return () => window.removeEventListener('resize', onResize)
   }, [])
 
-  useEffect(() => {
-    const ids = links.map(l => l.href.replace('#', ''))
-    const els = ids.map(id => document.getElementById(id)).filter(Boolean)
-    if (!els.length) return
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visible = entries
-          .filter(e => e.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)
-        if (visible[0]) setActive('#' + visible[0].target.id)
-      },
-      { rootMargin: '-40% 0px -50% 0px', threshold: [0, 0.25, 0.5, 0.75, 1] }
-    )
-
-    els.forEach(el => observer.observe(el))
-    return () => observer.disconnect()
-  }, [])
-
   return (
     <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}>
-      <div className={styles.progress} style={{ transform: `scaleX(${progress})` }} />
       <div className={styles.inner}>
-        <a href="#home" className={styles.logo}>
+        <a href="#about" className={styles.logo}>
           <span className={styles.logoMark}>AR</span>
-          <span className={styles.logoName}>Abdel Rahman</span>
+          <span className={styles.logoName}>Abdel Rahman Taeha</span>
         </a>
 
         <ul className={styles.links}>
-          {links.map(l => (
-            <li key={l.href}>
-              <a
-                href={l.href}
-                className={`${styles.link} ${active === l.href ? styles.linkActive : ''}`}
-              >
-                {l.label}
-              </a>
-            </li>
-          ))}
+          {links.map(l => {
+            const tabKey = l.href.replace('#', '')
+            return (
+              <li key={l.href}>
+                <a
+                  href={l.href}
+                  className={`${styles.link} ${activeTab === tabKey ? styles.linkActive : ''}`}
+                >
+                  {l.label}
+                </a>
+              </li>
+            )
+          })}
         </ul>
 
         <a
@@ -94,11 +71,19 @@ export default function Navbar() {
       </div>
 
       <div className={`${styles.mobileMenu} ${open ? styles.mobileMenuOpen : ''}`}>
-        {links.map(l => (
-          <a key={l.href} href={l.href} className={styles.mobileLink} onClick={() => setOpen(false)}>
-            {l.label}
-          </a>
-        ))}
+        {links.map(l => {
+          const tabKey = l.href.replace('#', '')
+          return (
+            <a
+              key={l.href}
+              href={l.href}
+              className={`${styles.mobileLink} ${activeTab === tabKey ? styles.mobileLinkActive : ''}`}
+              onClick={() => setOpen(false)}
+            >
+              {l.label}
+            </a>
+          )
+        })}
         <a
           href={`${import.meta.env.BASE_URL}resume.pdf`}
           target="_blank"

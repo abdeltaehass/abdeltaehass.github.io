@@ -12,7 +12,7 @@ const jobs = [
       'Evaluated medical LLM agent integrity across 840 paired-twin scenarios for the MedInsider FHIR-style benchmark under institutional pressure.',
       'Built evaluation and logging infrastructure — including deterministic action tracking and auditing workflows — for 9 distinct medical vision-language models across full-pipeline and baseline sub-panels.',
       'Trained a neutral baseline model and developed data collection pipelines for 2 major open-access clinical repositories used to analyze demographic bias in spinal radiology VLM outputs.',
-      'Co-authored SpineFairBench, submitted to NeurIPS 2026 (under review) — a counterfactual benchmark evaluating 7,996 paired spinal radiographs to audit demographic sensitivity in VLM-based report generation.',
+      'Co-authored SpineFairBench, submitted to NeurIPS 2026 — a counterfactual benchmark evaluating 7,996 paired spinal radiographs to audit demographic sensitivity in VLM-based report generation.',
     ],
   },
   {

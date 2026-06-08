@@ -41,7 +41,7 @@ a {
 }
 
 section {
-  padding: 100px 0;
+  padding: 120px 0 80px;
 }
 
 .container {
@@ -95,6 +95,16 @@ section {
 .reveal.revealed {
   opacity: 1;
   transform: none;
+}
+
+/* Tab content fade-in */
+.tab-main {
+  animation: tabFadeIn 0.32s ease;
+}
+
+@keyframes tabFadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
 }
 
 ::selection {
