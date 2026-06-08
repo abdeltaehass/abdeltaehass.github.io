@@ -4,6 +4,17 @@ import styles from './Experience.module.css'
 
 const jobs = [
   {
+    role: 'Founder',
+    company: 'Al-Manar — Islamic Companion App',
+    period: 'Mar 2026 — Present',
+    location: 'Self-employed · Remote',
+    points: [
+      'Launched end-to-end creation of Al-Manar, a production iOS app built with Flutter & Dart — owning the full software lifecycle from UI/UX to automated App Store distribution via Xcode Cloud CI/CD.',
+      'Built a custom background audio framework extending BaseAudioHandler for seamless Quran recitation with system-level media controls, persistent playback state, and optimized memory handling.',
+      'Integrated Google Places API with the Haversine formula to deliver GPS-based prayer times and real-time masjid discovery — supporting a global user base in 9 languages.',
+    ],
+  },
+  {
     role: 'AI Research Student',
     company: 'Independent Research',
     period: 'Aug 2025 — Present',
@@ -37,6 +48,48 @@ const jobs = [
       'Optimized data workflows and query performance, identifying and resolving bottlenecks that cut average pipeline latency and improved system stability under load.',
       'Revamped data integrity checks with SQL — prevented five critical production issues and automated 75% of data validation tasks with 100% test coverage.',
       'Collaborated with a team of 3 to automate model retraining agents, reducing manual effort by 6 hours/week via autonomous performance metrics.',
+    ],
+  },
+  {
+    role: 'Student Assistant — IT Help Desk',
+    company: 'CalHFA',
+    period: 'Jun 2022 — May 2024',
+    location: 'Sacramento, CA · Hybrid',
+    points: [
+      'Resolved 50+ tickets/week across a 200-user environment with 95% first-contact resolution (hardware, OS, apps, access, connectivity).',
+      'Managed vendor and stakeholder relationships for hardware and OS issues in a high-volume state IT environment.',
+    ],
+  },
+  {
+    role: 'Real Estate Agent',
+    company: 'Lyon Real Estate',
+    period: 'Aug 2021 — Mar 2024',
+    location: 'Sacramento County, CA · Part-time',
+    points: [
+      'Licensed real estate agent supporting residential sales and client acquisition.',
+      'Conducted client outreach, property showings, and transaction coordination.',
+      'Built strong communication, organization, and client-facing skills.',
+    ],
+  },
+  {
+    role: 'Lifeguard / Senior Guard / Pool Manager',
+    company: 'Southgate',
+    period: 'May 2019 — Aug 2022',
+    location: 'Sacramento, CA · Part-time',
+    points: [
+      'Managed daily pool operations, staff scheduling, and safety compliance.',
+      'Supervised and trained lifeguards; ensured adherence to operational and safety standards.',
+      'Developed leadership and responsibility in a fast-paced environment.',
+    ],
+  },
+  {
+    role: 'Soccer Referee',
+    company: 'Davis',
+    period: 'Jul 2016 — Jul 2019',
+    location: 'Part-time',
+    points: [
+      'Officiated youth soccer matches, enforcing rules and maintaining fair play.',
+      'Built early professionalism, conflict resolution, and decision-making skills.',
     ],
   },
 ]

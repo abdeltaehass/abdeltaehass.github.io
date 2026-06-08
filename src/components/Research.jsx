@@ -6,8 +6,6 @@ const papers = [
     title: 'SpineFairBench: A Counterfactual Benchmark for Auditing Demographic Sensitivity in Spinal Radiology VLM Reports',
     authors: 'Ahmed Taha, Abdel Rahman Taeha, Muzzammil Ahmadzada',
     affiliations: 'Columbia / Johns Hopkins · Georgia Tech · Stanford',
-    venue: 'NeurIPS 2026 (Submitted)',
-    status: 'Submitted',
     abstract: 'A paired counterfactual benchmark for auditing demographic sensitivity in spinal-radiology VLM reports. Evaluates a frozen nine-model VLM panel across 7,996 source/counterfactual pairs — apparent age and sex edited under target-pathology preservation. Recommendation drift observed in all nine models; 443/450 stratified pairs (98.4%) passed blinded review by three board-certified radiologists.',
     tags: ['Counterfactual Fairness', 'VLM', 'Medical Imaging', 'Stable Diffusion'],
     paper: 'https://www.researchgate.net/publication/404620116_SpineFairBench_A_Counterfactual_Benchmark_for_Auditing_Demographic_Sensitivity_in_Spinal_Radiology_VLM_Reports',
@@ -18,8 +16,6 @@ const papers = [
     title: 'MedInsider: Evaluating Medical LLM Agent Integrity Under Institutional Pressure',
     authors: 'Contributor',
     affiliations: 'Independent Research',
-    venue: 'In Progress',
-    status: 'In Progress',
     abstract: 'A FHIR-style benchmark evaluating medical LLM agent integrity under institutional pressure across 840 paired-twin scenarios. Contributed evaluation and logging infrastructure for agent behavior analysis — deterministic action tracking, auditing workflows, and reproducibility tooling.',
     tags: ['LLM Agents', 'FHIR', 'Healthcare AI', 'Evaluation'],
     paper: null,
@@ -31,10 +27,6 @@ const papers = [
 function PaperCard({ paper }) {
   return (
     <article className={styles.card}>
-      <div className={styles.header}>
-        <span className={styles.status} data-status={paper.status}>{paper.status}</span>
-        <span className={styles.venue}>{paper.venue}</span>
-      </div>
       <h3 className={styles.title}>{paper.title}</h3>
       <p className={styles.authors}>{paper.authors}</p>
       <p className={styles.affil}>{paper.affiliations}</p>
