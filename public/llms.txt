@@ -1,0 +1,39 @@
+# Abdelrahman Taeha
+
+> Software Engineer at DHCS (California Dept. of Health Care Services) and AI Research Student. Co-author of SpineFairBench (counterfactual benchmark for spinal-radiology VLM auditing) and contributor to MedInsider (medical LLM agent integrity benchmark). Currently pursuing an M.S. in Computer Science (Artificial Intelligence) at Georgia Tech.
+
+Portfolio: https://abdeltaehass.github.io/abdeltaehass-abdeltaehass.github.io/
+
+## About
+
+- **Name**: Abdelrahman Taeha
+- **Location**: Sacramento, CA
+- **Email**: abdeltaehass@gmail.com
+- **GitHub**: https://github.com/abdeltaehass
+- **LinkedIn**: https://www.linkedin.com/in/abdel-rahman-taeha-9113b320b/
+- **Education**: B.S. Computer Science, Sacramento State (2023–2025); M.S. Computer Science — Artificial Intelligence, Georgia Tech (2026–2028 expected)
+
+## Research
+
+- **SpineFairBench** (Co-author, with Ahmed Taha · Columbia/Johns Hopkins, Muzzammil Ahmadzada · Stanford): A paired counterfactual benchmark for auditing demographic sensitivity in spinal-radiology vision-language model (VLM) reports. Evaluates a frozen nine-model VLM panel across 7,996 source/counterfactual pairs (apparent age and sex edited under target-pathology preservation). Recommendation drift observed in all nine models; 443/450 stratified pairs (98.4%) passed blinded review by three board-certified radiologists. Paper: https://www.researchgate.net/publication/404620116 · Code: https://github.com/ahmedtaha100/SpineFairBench · Dataset: https://huggingface.co/datasets/ahmedtaha100/spinefairbench-artifacts
+- **MedInsider** (Contributor): FHIR-style benchmark evaluating medical LLM agent integrity under institutional pressure across 840 paired-twin scenarios. Built evaluation and logging infrastructure including deterministic action tracking, auditing workflows, and reproducibility tooling.
+
+## Experience
+
+- **Founder — Al-Manar Islamic Companion App** (Mar 2026 – Present): Production iOS app built with Flutter/Dart, distributed via Xcode Cloud CI/CD, with GPS-based prayer times and full Quran audio in 9 languages.
+- **AI Research Student — Independent Research** (Aug 2025 – Present): Co-authored SpineFairBench; built evaluation infrastructure for 9 medical VLMs.
+- **Software Engineer — DHCS** (May 2025 – Present): Automated monitoring/reporting pipelines, reduced observability overhead 40%, cut MTTD for production incidents in half.
+- **Software Engineering Intern (Machine Learning) — District Hut** (May 2024 – Jul 2025): Large-scale data pipelines processing 3 TB/week on AWS; 75% automation of data validation with 100% test coverage.
+
+## Selected Projects
+
+- **AutoApply**: Full-stack job-application toolkit. Scrapes CalCareers (and external boards), calls the Claude API to generate tailored resumes, cover letters, and SOQs per posting, scores fit on a 0–100 scale. https://github.com/abdeltaehass/AutoApply
+- **S.A.I.N.T.**: Network Intrusion Detection System reaching 89% accuracy on NSL-KDD (125K+ samples). Flask + Redis + Plotly low-latency inference at 50–100 connections/sec. https://github.com/abdeltaehass/S.A.I.N.T.
+- **StockPulse**: Real-time stock alerting and trading service on the Alpaca API. Docker-containerized. https://github.com/abdeltaehass/stockpulse
+- **PingVault**: Network monitoring with ICMP, SNMP polling, TCP/UDP port checks. https://github.com/abdeltaehass/PingVault
+- **GovCon**: Web platform for government contractors to track contracts, deadlines, and documentation. https://abdeltaehass.pythonanywhere.com/bids
+- **Al-Manar (iOS)**: Islamic companion app with prayer times, Quran with 7 reciters, and masjid finder. https://apps.apple.com/us/app/al-manar/id6759625182
+
+## Skills
+
+Python, JavaScript/React, Flutter/Dart, Swift, C/C++, Java, SQL · PyTorch, TensorFlow, LangChain, CrewAI · AWS, GCP, Docker, CI/CD · LLM evaluation, RAG, autonomous agents, counterfactual benchmarks

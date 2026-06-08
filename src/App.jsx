@@ -28,8 +28,9 @@ function App() {
 
   return (
     <>
+      <a href="#main-content" className="skip-link">Skip to main content</a>
       <Navbar activeTab={activeTab} />
-      <main className="tab-main" key={activeTab}>
+      <main id="main-content" className="tab-main" key={activeTab}>
         {activeTab === 'about' && <About />}
         {activeTab === 'research' && <Research />}
         {activeTab === 'projects' && <Projects />}

@@ -70,8 +70,11 @@ export default function About() {
           <div className={styles.photoWrap}>
             <img
               src={`${import.meta.env.BASE_URL}HeadShot.PNG`}
-              alt="Abdelrahman Taeha"
+              alt="Headshot of Abdelrahman Taeha, Software Engineer and AI Research Student"
               className={styles.photo}
+              width="260"
+              height="325"
+              fetchpriority="high"
             />
           </div>
         </div>

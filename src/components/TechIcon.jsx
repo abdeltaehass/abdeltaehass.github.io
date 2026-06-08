@@ -41,6 +41,8 @@ export default function TechIcon({ label }) {
         alt=""
         className={styles.icon}
         loading="lazy"
+        width="12"
+        height="12"
       />
       {label}
     </span>

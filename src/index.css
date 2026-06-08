@@ -111,6 +111,47 @@ section {
   background: var(--accent-dim);
 }
 
+/* Accessibility: focus rings */
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--text);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Skip to main content (keyboard-only) */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 12px;
+  background: var(--text);
+  color: var(--bg);
+  padding: 8px 16px;
+  border-radius: 6px;
+  z-index: 200;
+  font-size: 0.88rem;
+  font-weight: 500;
+  transition: top 0.2s;
+}
+
+.skip-link:focus {
+  top: 12px;
+}
+
+/* Respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .tab-main { animation: none; }
+}
+
 @media (max-width: 600px) {
   section { padding: 64px 0; }
   .section-title { font-size: 1.75rem; }
