@@ -4,7 +4,7 @@ import styles from './Research.module.css'
 const papers = [
   {
     title: 'SpineFairBench: A Counterfactual Benchmark for Auditing Demographic Sensitivity in Spinal Radiology VLM Reports',
-    authors: 'Ahmed Taha, Abdel Rahman Taeha, Muzzammil Ahmadzada',
+    authors: 'Ahmed Taha, Abdelrahman Taeha, Muzzammil Ahmadzada',
     affiliations: 'Columbia / Johns Hopkins · Georgia Tech · Stanford',
     abstract: 'A paired counterfactual benchmark for auditing demographic sensitivity in spinal-radiology VLM reports. Evaluates a frozen nine-model VLM panel across 7,996 source/counterfactual pairs — apparent age and sex edited under target-pathology preservation. Recommendation drift observed in all nine models; 443/450 stratified pairs (98.4%) passed blinded review by three board-certified radiologists.',
     tags: ['Counterfactual Fairness', 'VLM', 'Medical Imaging', 'Stable Diffusion'],

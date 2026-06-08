@@ -9,7 +9,7 @@ const quickLinks = [
 const education = [
   {
     school: 'Georgia Institute of Technology',
-    degree: 'M.S. in Computer Science — Machine Learning',
+    degree: 'M.S. in Computer Science — Artificial Intelligence',
     period: 'Aug 2026 — May 2028 (Expected)',
   },
   {
@@ -33,7 +33,7 @@ export default function About() {
         <div className={styles.top}>
           <div className={styles.left}>
             <h1 className={styles.heading}>
-              Abdel Rahman Taeha
+              Abdelrahman Taeha
             </h1>
             <p className={styles.subheading}>
               Software Engineer · AI Research Student
@@ -70,7 +70,7 @@ export default function About() {
           <div className={styles.photoWrap}>
             <img
               src={`${import.meta.env.BASE_URL}HeadShot.PNG`}
-              alt="Abdel Rahman Taeha"
+              alt="Abdelrahman Taeha"
               className={styles.photo}
             />
           </div>

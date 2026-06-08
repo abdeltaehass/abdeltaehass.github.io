@@ -31,7 +31,7 @@ export default function Navbar({ activeTab }) {
       <div className={styles.inner}>
         <a href="#about" className={styles.logo}>
           <span className={styles.logoMark}>AR</span>
-          <span className={styles.logoName}>Abdel Rahman Taeha</span>
+          <span className={styles.logoName}>Abdelrahman Taeha</span>
         </a>
 
         <ul className={styles.links}>
