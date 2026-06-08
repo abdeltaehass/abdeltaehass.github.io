@@ -2,7 +2,7 @@
 
 > Software Engineer at DHCS (California Dept. of Health Care Services) and AI Research Student. Co-author of SpineFairBench (counterfactual benchmark for spinal-radiology VLM auditing) and contributor to MedInsider (medical LLM agent integrity benchmark). Currently pursuing an M.S. in Computer Science (Artificial Intelligence) at Georgia Tech.
 
-Portfolio: https://abdeltaehass.github.io/abdeltaehass-abdeltaehass.github.io/
+Portfolio: https://abdeltaehass.github.io/
 
 ## About
 
