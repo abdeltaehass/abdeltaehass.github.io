@@ -3,10 +3,7 @@ import styles from './Navbar.module.css'
 
 const links = [
   { label: 'About', href: '#about' },
-  { label: 'Research', href: '#research' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'Experience', href: '#experience' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Work', href: '#work' },
 ]
 
 export default function Navbar({ activeTab }) {

@@ -7,11 +7,14 @@ import Projects from './components/Projects'
 import Experience from './components/Experience'
 import Contact from './components/Contact'
 
-const TABS = ['about', 'research', 'projects', 'experience', 'contact']
+const TABS = ['about', 'work']
 
+// Map legacy hashes to the new 2-tab structure
 function getTabFromHash() {
   const hash = window.location.hash.replace('#', '')
-  return TABS.includes(hash) ? hash : 'about'
+  if (hash === 'research' || hash === 'projects' || hash === 'work') return 'work'
+  if (hash === 'about' || hash === 'experience' || hash === 'contact' || hash === 'home') return 'about'
+  return 'about'
 }
 
 function App() {
@@ -31,11 +34,19 @@ function App() {
       <a href="#main-content" className="skip-link">Skip to main content</a>
       <Navbar activeTab={activeTab} />
       <main id="main-content" className="tab-main" key={activeTab}>
-        {activeTab === 'about' && <About />}
-        {activeTab === 'research' && <Research />}
-        {activeTab === 'projects' && <Projects />}
-        {activeTab === 'experience' && <Experience />}
-        {activeTab === 'contact' && <Contact />}
+        {activeTab === 'about' && (
+          <>
+            <About />
+            <Experience />
+            <Contact />
+          </>
+        )}
+        {activeTab === 'work' && (
+          <>
+            <Research />
+            <Projects />
+          </>
+        )}
       </main>
     </>
   )

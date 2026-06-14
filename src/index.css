@@ -41,7 +41,14 @@ a {
 }
 
 section {
-  padding: 120px 0 80px;
+  padding: 120px 0 60px;
+}
+
+/* When sections are stacked inside a tab, only the first one needs full top padding */
+.tab-main > section ~ section {
+  padding-top: 40px;
+  border-top: 1px solid var(--border);
+  margin-top: 20px;
 }
 
 .container {

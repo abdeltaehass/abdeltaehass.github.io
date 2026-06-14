@@ -1,5 +1,5 @@
 .section {
-  padding: 120px 0 60px;
+  /* padding inherited from global section rule; overridden when stacked via .tab-main > section ~ section */
 }
 
 .links {
