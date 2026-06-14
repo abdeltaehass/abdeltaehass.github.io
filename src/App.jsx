@@ -2,17 +2,18 @@ import { useState, useEffect } from 'react'
 import './index.css'
 import Navbar from './components/Navbar'
 import About from './components/About'
+import Skills from './components/Skills'
 import Research from './components/Research'
 import Projects from './components/Projects'
 import Experience from './components/Experience'
 import Contact from './components/Contact'
 
-const TABS = ['about', 'work']
+const TABS = ['about', 'research', 'work']
 
-// Map legacy hashes to the new 2-tab structure
 function getTabFromHash() {
   const hash = window.location.hash.replace('#', '')
-  if (hash === 'research' || hash === 'projects' || hash === 'work') return 'work'
+  if (hash === 'research') return 'research'
+  if (hash === 'projects' || hash === 'work') return 'work'
   if (hash === 'about' || hash === 'experience' || hash === 'contact' || hash === 'home') return 'about'
   return 'about'
 }
@@ -37,13 +38,18 @@ function App() {
         {activeTab === 'about' && (
           <>
             <About />
+            <Skills />
             <Experience />
             <Contact />
           </>
         )}
-        {activeTab === 'work' && (
+        {activeTab === 'research' && (
           <>
             <Research />
+          </>
+        )}
+        {activeTab === 'work' && (
+          <>
             <Projects />
           </>
         )}

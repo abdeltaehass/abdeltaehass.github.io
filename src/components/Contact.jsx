@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import useScrollReveal from '../hooks/useScrollReveal'
 import styles from './Contact.module.css'
 
@@ -21,6 +22,20 @@ const socials = [
 
 export default function Contact() {
   const ref = useScrollReveal()
+  const [form, setForm] = useState({ name: '', email: '', message: '' })
+  const [status, setStatus] = useState(null)
+
+  const handleChange = e => setForm(f => ({ ...f, [e.target.name]: e.target.value }))
+
+  const handleSubmit = e => {
+    e.preventDefault()
+    const subject = encodeURIComponent(`Message from ${form.name}`)
+    const body = encodeURIComponent(`${form.message}\n\n— ${form.name}\n${form.email}`)
+    window.location.href = `mailto:abdeltaehass@gmail.com?subject=${subject}&body=${body}`
+    setStatus('sent')
+    setForm({ name: '', email: '', message: '' })
+  }
+
   return (
     <>
       <section id="contact" className={styles.section}>
@@ -31,19 +46,74 @@ export default function Contact() {
             Open to new roles and collaborations — feel free to reach out about
             AI agents, ML pipelines, or anything in between.
           </p>
-          <div className={styles.links}>
-            {socials.map(s => (
-              <a
-                key={s.label}
-                href={s.href}
-                target={s.href.startsWith('mailto') ? undefined : '_blank'}
-                rel="noopener noreferrer"
-                className={styles.socialCard}
-              >
-                <span className={styles.socialLabel}>{s.label}</span>
-                <span className={styles.socialHandle}>{s.handle} ↗</span>
-              </a>
-            ))}
+
+          <div className={styles.layout}>
+            {/* Social cards */}
+            <div className={styles.socials}>
+              {socials.map(s => (
+                <a
+                  key={s.label}
+                  href={s.href}
+                  target={s.href.startsWith('mailto') ? undefined : '_blank'}
+                  rel="noopener noreferrer"
+                  className={styles.socialCard}
+                >
+                  <span className={styles.socialLabel}>{s.label}</span>
+                  <span className={styles.socialHandle}>{s.handle} ↗</span>
+                </a>
+              ))}
+            </div>
+
+            {/* Contact form */}
+            <form className={styles.form} onSubmit={handleSubmit}>
+              <div className={styles.row}>
+                <div className={styles.field}>
+                  <label className={styles.label} htmlFor="name">Name</label>
+                  <input
+                    id="name"
+                    name="name"
+                    type="text"
+                    required
+                    placeholder="Your name"
+                    className={styles.input}
+                    value={form.name}
+                    onChange={handleChange}
+                  />
+                </div>
+                <div className={styles.field}>
+                  <label className={styles.label} htmlFor="email">Email</label>
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    required
+                    placeholder="your@email.com"
+                    className={styles.input}
+                    value={form.email}
+                    onChange={handleChange}
+                  />
+                </div>
+              </div>
+              <div className={styles.field}>
+                <label className={styles.label} htmlFor="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  required
+                  rows={4}
+                  placeholder="What's on your mind?"
+                  className={styles.textarea}
+                  value={form.message}
+                  onChange={handleChange}
+                />
+              </div>
+              <button type="submit" className={styles.btn}>
+                Send message →
+              </button>
+              {status === 'sent' && (
+                <p className={styles.success}>Opening your mail client…</p>
+              )}
+            </form>
           </div>
         </div>
       </section>

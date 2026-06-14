@@ -1,21 +1,29 @@
 .section {
-  /* padding inherited from global section rule; overridden when stacked via .tab-main > section ~ section */
+  /* padding inherited from global section rule */
 }
 
-.links {
+.layout {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* Social cards — stacked vertically */
+.socials {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .socialCard {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 5px;
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: 12px;
-  padding: 20px 22px;
+  padding: 16px 20px;
   transition: border-color 0.2s, background 0.2s;
 }
 
@@ -25,15 +33,92 @@
 }
 
 .socialLabel {
-  font-size: 0.78rem;
+  font-size: 0.72rem;
   color: var(--text-muted);
+  letter-spacing: 0.04em;
+  font-weight: 600;
 }
 
 .socialHandle {
-  font-size: 0.92rem;
+  font-size: 0.88rem;
   color: var(--text);
 }
 
+/* Form */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+}
+
+.input,
+.textarea {
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  color: var(--text);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 14px;
+  width: 100%;
+  transition: border-color 0.2s;
+  outline: none;
+  resize: vertical;
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: var(--text-subtle);
+}
+
+.input:focus,
+.textarea:focus {
+  border-color: var(--border-strong);
+}
+
+.btn {
+  align-self: flex-start;
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--bg);
+  background: var(--text);
+  border: none;
+  padding: 10px 22px;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.success {
+  font-size: 0.86rem;
+  color: var(--text-muted);
+}
+
+/* Footer */
 .footer {
   border-top: 1px solid var(--border);
   padding: 22px 0;
@@ -69,6 +154,7 @@
 }
 
 @media (max-width: 800px) {
-  .links { grid-template-columns: 1fr; }
+  .layout { grid-template-columns: 1fr; }
+  .row { grid-template-columns: 1fr; }
   .footerInner { justify-content: center; text-align: center; }
 }

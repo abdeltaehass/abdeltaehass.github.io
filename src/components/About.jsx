@@ -45,6 +45,9 @@ export default function About() {
               Student contributing to medical-AI benchmarks like <em>MedInsider</em> and{' '}
               <em>SpineFairBench</em>.
             </p>
+            <p className={styles.openTo}>
+              📢 Open to full-time SWE &amp; ML Engineering roles — available starting May 2026.
+            </p>
             <div className={styles.quickLinks}>
               {quickLinks.map(l => (
                 <a

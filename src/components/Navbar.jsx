@@ -3,6 +3,7 @@ import styles from './Navbar.module.css'
 
 const links = [
   { label: 'About', href: '#about' },
+  { label: 'Research', href: '#research' },
   { label: 'Work', href: '#work' },
 ]
 
