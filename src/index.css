@@ -51,6 +51,49 @@ section {
   margin-top: 20px;
 }
 
+/* Side-by-side row for stacking sections in 2 columns */
+.parallel-row {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 40px;
+  max-width: 1080px;
+  margin: 20px auto 0;
+  padding: 48px 24px 56px;
+  border-top: 1px solid var(--border);
+  align-items: start;
+}
+
+.parallel-row > section {
+  padding: 0;
+  border-top: none;
+  margin-top: 0;
+}
+
+.parallel-row .container {
+  padding: 0;
+  max-width: none;
+  width: 100%;
+}
+
+.parallel-row .section-title {
+  font-size: 1.55rem;
+  line-height: 1.15;
+  margin-bottom: 8px;
+}
+
+.parallel-row .section-subtitle {
+  font-size: 0.92rem;
+  margin-bottom: 28px;
+}
+
+@media (max-width: 900px) {
+  .parallel-row {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    padding: 40px 24px 40px;
+  }
+}
+
 .container {
   max-width: 960px;
   margin: 0 auto;

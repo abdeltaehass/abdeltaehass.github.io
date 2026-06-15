@@ -38,8 +38,10 @@ function App() {
         {activeTab === 'about' && (
           <>
             <About />
-            <Skills />
-            <Experience />
+            <div className="parallel-row">
+              <Skills />
+              <Experience />
+            </div>
             <Contact />
           </>
         )}
