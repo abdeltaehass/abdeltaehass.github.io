@@ -43,7 +43,7 @@ export default function Sidebar({ activeTab }) {
 
         <div className={styles.identity}>
           <h1 className={styles.name}>Abdelrahman Taeha</h1>
-          <p className={styles.title}>Software Engineer · AI Research Student</p>
+          <p className={styles.title}>Software Engineer · AI Research Engineer</p>
         </div>
 
         <div className={`${styles.collapsible} ${open ? styles.collapsibleOpen : ''}`}>

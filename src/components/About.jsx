@@ -11,17 +11,10 @@ export default function About() {
           I work at the intersection of software engineering and machine learning,
           building <em>autonomous AI agents</em>, ML evaluation infrastructure, and
           reliable data pipelines. I'm a Software Engineer at <strong>DHCS</strong> and
-          an AI Research Student contributing to medical-AI benchmarks like{' '}
+          an AI Research Engineer collaborating with researchers at Columbia,
+          Johns Hopkins, Georgia Tech, and Stanford on medical-AI benchmarks like{' '}
           <em>MedInsider</em> and <em>SpineFairBench</em>.
         </p>
-
-        <div className={styles.openTo}>
-          <span className={styles.openToIcon}>📢</span>
-          <span>
-            <strong>Open to full-time SWE &amp; ML Engineering roles</strong> — available
-            starting May 2026.
-          </span>
-        </div>
       </div>
     </section>
   )

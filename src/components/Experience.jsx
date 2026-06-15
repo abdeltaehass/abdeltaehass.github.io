@@ -15,15 +15,15 @@ const jobs = [
     ],
   },
   {
-    role: 'AI Research Student',
-    company: 'Independent Research',
+    role: 'AI Research Engineer',
+    company: 'Columbia / Johns Hopkins / Georgia Tech / Stanford Collaboration',
     period: 'Aug 2025 — Present',
     location: 'Remote',
     points: [
-      'Evaluated medical LLM agent integrity across 840 paired-twin scenarios for the MedInsider FHIR-style benchmark under institutional pressure.',
-      'Built evaluation and logging infrastructure — including deterministic action tracking and auditing workflows — for 9 distinct medical vision-language models across full-pipeline and baseline sub-panels.',
+      'Co-authored SpineFairBench (submitted NeurIPS 2026), a counterfactual benchmark evaluating 7,996 paired spinal radiographs to audit demographic sensitivity in VLM-based report generation across a frozen nine-model panel.',
+      'Evaluated medical LLM agent integrity across 840 paired-twin scenarios for the MedInsider FHIR-style benchmark, identifying systematic failure modes in clinical decision-making under simulated institutional pressure.',
+      'Architected evaluation and logging infrastructure — including deterministic action tracking and auditing workflows — for 9 distinct medical vision-language models across full-pipeline and baseline sub-panels.',
       'Trained a neutral baseline model and developed data collection pipelines for 2 major open-access clinical repositories used to analyze demographic bias in spinal radiology VLM outputs.',
-      'Co-authored SpineFairBench, a counterfactual benchmark evaluating 7,996 paired spinal radiographs to audit demographic sensitivity in VLM-based report generation.',
     ],
   },
   {
@@ -32,10 +32,10 @@ const jobs = [
     period: 'May 2025 — Present',
     location: 'Sacramento, CA',
     points: [
-      'Automated monitoring and reporting pipelines across enterprise systems, reducing manual observability overhead by 40% and cutting mean time to detection (MTTD) for production incidents in half.',
-      'Engineered backend integrations and validation workflows that surfaced system behavior anomalies early, accelerating root-cause analysis by 35% and streamlining stakeholder communication.',
-      'Established internal dashboards and reporting applications to visualize agent-driven operational metrics — reducing incident resolution time by 30%.',
-      'Implemented log-processing pipelines and monitoring integrations that improved real-time alerting accuracy by 20%.',
+      'Automated monitoring and reporting pipelines across enterprise systems, reducing manual observability overhead by 40% and cutting mean time to detection (MTTD) for production incidents in half through proactive anomaly surfacing.',
+      'Built backend integrations and validation workflows that surfaced system behavior anomalies early, accelerating root-cause analysis by 35% and streamlining cross-team stakeholder communication during incident response.',
+      'Established internal dashboards and reporting applications to visualize agent-driven operational metrics in real time, reducing incident resolution time by 30% and improving leadership visibility into system health.',
+      'Implemented log-processing pipelines and monitoring integrations that improved real-time alerting accuracy by 20%, reducing false positives and engineer alert fatigue.',
     ],
   },
   {
@@ -44,8 +44,8 @@ const jobs = [
     period: 'May 2024 — Jul 2025',
     location: 'Sacramento, CA',
     points: [
-      'Developed large-scale data pipelines processing 3 TB/week across distributed cloud infrastructure, improving throughput and system reliability in a high-volume production environment.',
-      'Optimized data workflows and query performance, identifying and resolving bottlenecks that cut average pipeline latency and improved system stability under load.',
+      'Scaled distributed data pipelines processing 3 TB/week across distributed cloud infrastructure, improving throughput and system reliability in a high-volume production environment.',
+      'Optimized data workflows and query performance, identifying and resolving bottlenecks that cut average pipeline latency and improved system stability under sustained load.',
       'Revamped data integrity checks with SQL — prevented five critical production issues and automated 75% of data validation tasks with 100% test coverage.',
       'Collaborated with a team of 3 to automate model retraining agents, reducing manual effort by 6 hours/week via autonomous performance metrics.',
     ],
