@@ -40,81 +40,68 @@ a {
   text-decoration: none;
 }
 
-section {
-  padding: 120px 0 60px;
-}
-
-/* When sections are stacked inside a tab, only the first one needs full top padding */
-.tab-main > section ~ section {
-  padding-top: 40px;
-  border-top: 1px solid var(--border);
-  margin-top: 20px;
-}
-
-/* Side-by-side row for stacking sections in 2 columns */
-.parallel-row {
+/* Sidebar + main grid layout */
+.app-layout {
   display: grid;
-  grid-template-columns: 1fr 1.8fr;
-  gap: 36px;
-  max-width: 1180px;
-  margin: 20px auto 0;
-  padding: 48px 24px 56px;
-  border-top: 1px solid var(--border);
+  grid-template-columns: 280px 1fr;
+  gap: 32px;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 24px 28px 60px;
   align-items: start;
 }
 
-.parallel-row > section {
-  padding: 0;
-  border-top: none;
-  margin-top: 0;
+.tab-main {
+  min-width: 0;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 36px 40px 40px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 4px 16px rgba(0, 0, 0, 0.03);
+  animation: tabFadeIn 0.32s ease;
 }
 
-.parallel-row .container {
-  padding: 0;
-  max-width: none;
-  width: 100%;
+@keyframes tabFadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
 }
 
-.parallel-row .section-title {
-  font-size: 1.55rem;
-  line-height: 1.15;
-  margin-bottom: 8px;
+section {
+  padding: 32px 0 28px;
 }
 
-.parallel-row .section-subtitle {
-  font-size: 0.92rem;
-  margin-bottom: 28px;
+/* When sections are stacked inside a tab, only the first one needs full top padding */
+.tab-main > section:first-child {
+  padding-top: 4px;
 }
 
-@media (max-width: 900px) {
-  .parallel-row {
-    grid-template-columns: 1fr;
-    gap: 36px;
-    padding: 40px 24px 40px;
-  }
+.tab-main > section ~ section {
+  padding-top: 32px;
+  border-top: 1px solid var(--border);
+  margin-top: 24px;
 }
 
 .container {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 0 24px;
+  max-width: none;
+  margin: 0;
+  padding: 0;
 }
 
 .section-label {
   font-family: var(--font-sans);
-  font-size: 0.78rem;
+  font-size: 0.74rem;
   color: var(--text-muted);
-  letter-spacing: 0.04em;
-  margin-bottom: 14px;
+  letter-spacing: 0.06em;
+  margin-bottom: 10px;
   font-weight: 500;
   text-transform: uppercase;
 }
 
 .section-title {
   font-family: var(--font-serif);
-  font-size: 2.4rem;
+  font-size: 2rem;
   font-weight: 500;
-  margin-bottom: 14px;
+  margin-bottom: 10px;
   color: var(--text);
   letter-spacing: -0.02em;
   line-height: 1.1;
@@ -123,10 +110,10 @@ section {
 
 .section-subtitle {
   color: var(--text-muted);
-  font-size: 1.02rem;
-  max-width: 600px;
-  margin-bottom: 56px;
-  line-height: 1.65;
+  font-size: 0.98rem;
+  max-width: 640px;
+  margin-bottom: 32px;
+  line-height: 1.6;
 }
 
 .accent-text {
@@ -147,21 +134,11 @@ section {
   transform: none;
 }
 
-/* Tab content fade-in */
-.tab-main {
-  animation: tabFadeIn 0.32s ease;
-}
-
-@keyframes tabFadeIn {
-  from { opacity: 0; transform: translateY(8px); }
-  to { opacity: 1; transform: none; }
-}
-
 ::selection {
   background: var(--accent-dim);
 }
 
-/* Accessibility: focus rings */
+/* Accessibility */
 :focus {
   outline: none;
 }
@@ -172,7 +149,6 @@ section {
   border-radius: 4px;
 }
 
-/* Skip to main content (keyboard-only) */
 .skip-link {
   position: absolute;
   top: -40px;
@@ -191,7 +167,6 @@ section {
   top: 12px;
 }
 
-/* Respect prefers-reduced-motion */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
@@ -202,7 +177,21 @@ section {
   .tab-main { animation: none; }
 }
 
-@media (max-width: 600px) {
-  section { padding: 64px 0; }
-  .section-title { font-size: 1.75rem; }
+@media (max-width: 900px) {
+  .app-layout {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 14px;
+  }
+
+  .tab-main {
+    padding: 24px 22px 28px;
+    border-radius: 14px;
+  }
+
+  .section-title { font-size: 1.6rem; }
+  .tab-main > section ~ section {
+    padding-top: 24px;
+    margin-top: 18px;
+  }
 }

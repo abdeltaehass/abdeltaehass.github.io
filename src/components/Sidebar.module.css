@@ -1,0 +1,237 @@
+.sidebar {
+  position: sticky;
+  top: 24px;
+  height: fit-content;
+  align-self: start;
+}
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 4px 16px rgba(0, 0, 0, 0.03);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 12px;
+}
+
+.photo {
+  width: 100%;
+  max-width: 200px;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  display: block;
+  margin: 0 auto;
+}
+
+.identity {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 4px;
+}
+
+.name {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--text);
+  letter-spacing: -0.015em;
+  line-height: 1.15;
+}
+
+.title {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.collapsible {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+}
+
+/* Resume button */
+.resumeBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px 16px;
+  width: 100%;
+  text-align: center;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.resumeBtn:hover {
+  background: var(--text);
+  color: var(--bg);
+  border-color: var(--text);
+}
+
+.resumeLabel {
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+}
+
+.resumeMeta {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.06em;
+  color: var(--text-subtle);
+}
+
+.resumeBtn:hover .resumeMeta {
+  color: rgba(250, 248, 243, 0.6);
+}
+
+/* Contact button */
+.contactBtn {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px 16px;
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: var(--text);
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.contactBtn:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-strong);
+}
+
+/* Socials */
+.socials {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.socialBtn {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text-muted);
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+
+.socialBtn:hover {
+  color: var(--text);
+  border-color: var(--text);
+  background: var(--bg-card-hover);
+}
+
+/* Nav */
+.nav {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 2px;
+  border-top: 1px solid var(--border);
+  padding-top: 14px;
+  margin-top: 2px;
+}
+
+.navLink {
+  display: block;
+  padding: 9px 12px;
+  border-radius: 8px;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  transition: color 0.2s, background 0.2s;
+}
+
+.navLink:hover {
+  color: var(--text);
+  background: var(--bg-surface);
+}
+
+.navLinkActive {
+  color: var(--text);
+  background: var(--bg-surface);
+}
+
+/* Hamburger (mobile only) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+}
+
+.bar {
+  display: block;
+  width: 20px;
+  height: 1.5px;
+  background: var(--text);
+  border-radius: 2px;
+  transition: transform 0.25s, opacity 0.25s;
+}
+
+.bar1Open { transform: translateY(6.5px) rotate(45deg); }
+.bar2Open { opacity: 0; }
+.bar3Open { transform: translateY(-6.5px) rotate(-45deg); }
+
+/* Mobile layout */
+@media (max-width: 900px) {
+  .sidebar { position: relative; top: 0; }
+
+  .card { padding: 16px; gap: 12px; }
+
+  .header { justify-content: space-between; gap: 16px; }
+
+  .photo { max-width: 64px; border-radius: 10px; margin: 0; }
+
+  .identity { align-items: flex-start; text-align: left; flex: 1; gap: 2px; }
+
+  .name { font-size: 1.1rem; }
+
+  .title { font-size: 0.78rem; }
+
+  .hamburger { display: flex; }
+
+  .collapsible {
+    max-height: 0;
+    overflow: hidden;
+    gap: 0;
+    transition: max-height 0.3s ease, gap 0.3s ease;
+  }
+
+  .collapsibleOpen {
+    max-height: 600px;
+    gap: 12px;
+    padding-top: 4px;
+  }
+}
