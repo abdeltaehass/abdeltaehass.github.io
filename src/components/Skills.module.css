@@ -1,14 +1,99 @@
+.block {
+  margin-bottom: 28px;
+}
+
+.block:last-child {
+  margin-bottom: 0;
+}
+
+.blockTitle {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--text);
+  letter-spacing: -0.015em;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+/* Focus list */
+.focusList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.focusList li {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+  padding-left: 16px;
+  position: relative;
+}
+
+.focusList li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 5px;
+  height: 5px;
+  background: var(--text);
+  border-radius: 50%;
+}
+
+/* Education */
+.eduList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.eduItem {
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+.eduItem:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.eduSchool {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
+.eduDegree {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 3px;
+}
+
+.eduPeriod {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  color: var(--text-subtle);
+  margin-top: 5px;
+}
+
+/* Skills */
 .grid {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 14px;
 }
 
 .group {
   background: var(--bg-card);
   border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 20px 24px;
+  border-radius: 10px;
+  padding: 14px 16px;
   transition: border-color 0.2s;
 }
 
@@ -17,26 +102,26 @@
 }
 
 .category {
-  font-size: 0.78rem;
+  font-size: 0.72rem;
   font-weight: 600;
   color: var(--text-muted);
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 6px;
 }
 
 .tag {
-  font-size: 0.85rem;
+  font-size: 0.78rem;
   color: var(--text);
   background: var(--bg-surface);
   border: 1px solid var(--border);
-  padding: 5px 14px;
+  padding: 3px 10px;
   border-radius: 100px;
   transition: background 0.2s, border-color 0.2s;
 }

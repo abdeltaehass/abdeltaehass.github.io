@@ -6,26 +6,6 @@ const quickLinks = [
   { label: 'Email', href: 'mailto:abdeltaehass@gmail.com' },
 ]
 
-const education = [
-  {
-    school: 'Georgia Institute of Technology',
-    degree: 'M.S. in Computer Science — Artificial Intelligence',
-    period: 'Aug 2026 — May 2028 (Expected)',
-  },
-  {
-    school: 'Sacramento State University',
-    degree: 'B.S. in Computer Science',
-    period: 'Aug 2023 — Dec 2025',
-  },
-]
-
-const focus = [
-  'Autonomous AI agents and LLM evaluation infrastructure',
-  'Counterfactual benchmarks for medical vision-language models',
-  'Large-scale data and observability pipelines (3 TB/week)',
-  'Production iOS apps (Flutter & Dart, Xcode Cloud CI/CD)',
-]
-
 export default function About() {
   return (
     <section id="about" className={styles.section}>
@@ -79,31 +59,6 @@ export default function About() {
               height="325"
               fetchpriority="high"
             />
-          </div>
-        </div>
-
-        <div className={styles.divider} />
-
-        <div className={styles.gridTwo}>
-          <div>
-            <h2 className={styles.h2}>What I'm focused on</h2>
-            <ul className={styles.focusList}>
-              {focus.map(f => (
-                <li key={f}>{f}</li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <h2 className={styles.h2}>Education</h2>
-            <ul className={styles.eduList}>
-              {education.map(e => (
-                <li key={e.school} className={styles.eduItem}>
-                  <div className={styles.eduSchool}>{e.school}</div>
-                  <div className={styles.eduDegree}>{e.degree}</div>
-                  <div className={styles.eduPeriod}>{e.period}</div>
-                </li>
-              ))}
-            </ul>
           </div>
         </div>
       </div>
