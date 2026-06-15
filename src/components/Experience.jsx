@@ -124,23 +124,20 @@ export default function Experience() {
           autonomous agents, ML pipelines, and shipping reliable software.
         </p>
 
-        <div className={styles.timeline}>
+        <div className={styles.cards}>
           {jobs.map((j, i) => (
-            <div key={i} className={styles.item}>
-              <div className={styles.dot} />
-              <div className={styles.card}>
-                <div className={styles.header}>
-                  <h3 className={styles.role}>{j.role}</h3>
-                  <span className={styles.period}>{j.period}</span>
-                </div>
-                <p className={styles.company}>{j.company}</p>
-                {j.location && <p className={styles.location}>{j.location}</p>}
-                <ul className={styles.points}>
-                  {j.points.map((p, idx) => (
-                    <li key={idx}>{p}</li>
-                  ))}
-                </ul>
+            <div key={i} className={styles.card}>
+              <div className={styles.header}>
+                <h3 className={styles.role}>{j.role}</h3>
+                <span className={styles.period}>{j.period}</span>
               </div>
+              <p className={styles.company}>{j.company}</p>
+              {j.location && <p className={styles.location}>{j.location}</p>}
+              <ul className={styles.points}>
+                {j.points.map((p, idx) => (
+                  <li key={idx}>{p}</li>
+                ))}
+              </ul>
             </div>
           ))}
         </div>

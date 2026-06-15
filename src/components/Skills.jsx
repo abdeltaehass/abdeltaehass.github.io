@@ -52,26 +52,26 @@ export default function Skills() {
         <p className="section-label">Profile</p>
         <h2 className="section-title">At a glance.</h2>
 
-        {/* Focus */}
-        <div className={styles.block}>
-          <h3 className={styles.blockTitle}>Focus</h3>
-          <ul className={styles.focusList}>
-            {focus.map(f => <li key={f}>{f}</li>)}
-          </ul>
-        </div>
-
-        {/* Education */}
-        <div className={styles.block}>
-          <h3 className={styles.blockTitle}>Education</h3>
-          <ul className={styles.eduList}>
-            {education.map(e => (
-              <li key={e.school} className={styles.eduItem}>
-                <div className={styles.eduSchool}>{e.school}</div>
-                <div className={styles.eduDegree}>{e.degree}</div>
-                <div className={styles.eduPeriod}>{e.period}</div>
-              </li>
-            ))}
-          </ul>
+        {/* Focus + Education side-by-side */}
+        <div className={styles.topRow}>
+          <div className={styles.block}>
+            <h3 className={styles.blockTitle}>Focus</h3>
+            <ul className={styles.focusList}>
+              {focus.map(f => <li key={f}>{f}</li>)}
+            </ul>
+          </div>
+          <div className={styles.block}>
+            <h3 className={styles.blockTitle}>Education</h3>
+            <ul className={styles.eduList}>
+              {education.map(e => (
+                <li key={e.school} className={styles.eduItem}>
+                  <div className={styles.eduSchool}>{e.school}</div>
+                  <div className={styles.eduDegree}>{e.degree}</div>
+                  <div className={styles.eduPeriod}>{e.period}</div>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
         {/* Skills */}

@@ -54,9 +54,9 @@ section {
 /* Side-by-side row for stacking sections in 2 columns */
 .parallel-row {
   display: grid;
-  grid-template-columns: 1fr 1.25fr;
-  gap: 40px;
-  max-width: 1080px;
+  grid-template-columns: 1fr 1.8fr;
+  gap: 36px;
+  max-width: 1180px;
   margin: 20px auto 0;
   padding: 48px 24px 56px;
   border-top: 1px solid var(--border);

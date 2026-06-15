@@ -1,26 +1,8 @@
-.timeline {
-  position: relative;
-  padding-left: 22px;
-  border-left: 1px solid var(--border);
-  display: flex;
-  flex-direction: column;
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 12px;
   margin-top: 6px;
-}
-
-.item {
-  position: relative;
-}
-
-.dot {
-  position: absolute;
-  left: -29px;
-  top: 26px;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--text);
-  box-shadow: 0 0 0 3px var(--bg);
 }
 
 .card {
