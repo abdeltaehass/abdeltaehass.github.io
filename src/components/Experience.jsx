@@ -110,8 +110,37 @@ function StatItem({ stat }) {
   )
 }
 
-export default function Experience() {
+export default function Experience({ embedded = false }) {
   const ref = useScrollReveal()
+
+  const content = (
+    <>
+      <div className={styles.cards}>
+        {jobs.map((j, i) => (
+          <div key={i} className={styles.card}>
+            <div className={styles.header}>
+              <h3 className={styles.role}>{j.role}</h3>
+              <span className={styles.period}>{j.period}</span>
+            </div>
+            <p className={styles.company}>{j.company}</p>
+            {j.location && <p className={styles.location}>{j.location}</p>}
+            <ul className={styles.points}>
+              {j.points.map((p, idx) => (
+                <li key={idx}>{p}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+
+      <div className={styles.statsGrid}>
+        {stats.map(s => <StatItem key={s.label} stat={s} />)}
+      </div>
+    </>
+  )
+
+  if (embedded) return content
+
   return (
     <section id="experience">
       <div className={`container reveal`} ref={ref}>
@@ -121,28 +150,7 @@ export default function Experience() {
           A progression from production engineering to AI research — focused on
           autonomous agents, ML pipelines, and shipping reliable software.
         </p>
-
-        <div className={styles.cards}>
-          {jobs.map((j, i) => (
-            <div key={i} className={styles.card}>
-              <div className={styles.header}>
-                <h3 className={styles.role}>{j.role}</h3>
-                <span className={styles.period}>{j.period}</span>
-              </div>
-              <p className={styles.company}>{j.company}</p>
-              {j.location && <p className={styles.location}>{j.location}</p>}
-              <ul className={styles.points}>
-                {j.points.map((p, idx) => (
-                  <li key={idx}>{p}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-
-        <div className={styles.statsGrid}>
-          {stats.map(s => <StatItem key={s.label} stat={s} />)}
-        </div>
+        {content}
       </div>
     </section>
   )

@@ -3,48 +3,42 @@ import './index.css'
 import Sidebar from './components/Sidebar'
 import About from './components/About'
 import Research from './components/Research'
-import Projects from './components/Projects'
-import Experience from './components/Experience'
+import ExperienceProjects from './components/ExperienceProjects'
 import Contact, { ContactFooter } from './components/Contact'
 
-const TABS = ['about', 'research', 'work', 'contact']
-
-function getTabFromHash() {
-  const hash = window.location.hash.replace('#', '')
-  if (hash === 'research') return 'research'
-  if (hash === 'projects' || hash === 'work') return 'work'
-  if (hash === 'contact' || hash === 'experience') return 'contact'
-  if (hash === 'about' || hash === 'home') return 'about'
-  return 'about'
-}
+const SECTIONS = ['about', 'research', 'work', 'contact']
 
 function App() {
-  const [activeTab, setActiveTab] = useState(getTabFromHash)
+  const [activeSection, setActiveSection] = useState('about')
 
   useEffect(() => {
-    const onHashChange = () => {
-      setActiveTab(getTabFromHash())
-      window.scrollTo({ top: 0, behavior: 'instant' })
-    }
-    window.addEventListener('hashchange', onHashChange)
-    return () => window.removeEventListener('hashchange', onHashChange)
+    const els = SECTIONS.map(id => document.getElementById(id)).filter(Boolean)
+    if (!els.length) return
+
+    const observer = new IntersectionObserver(
+      entries => {
+        const visible = entries
+          .filter(e => e.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)
+        if (visible[0]) setActiveSection(visible[0].target.id)
+      },
+      { rootMargin: '-30% 0px -55% 0px', threshold: [0, 0.25, 0.5, 0.75, 1] }
+    )
+
+    els.forEach(el => observer.observe(el))
+    return () => observer.disconnect()
   }, [])
 
   return (
     <>
       <a href="#main-content" className="skip-link">Skip to main content</a>
       <div className="app-layout">
-        <Sidebar activeTab={activeTab} />
-        <main id="main-content" className="tab-main" key={activeTab}>
-          {activeTab === 'about' && <About />}
-          {activeTab === 'research' && <Research />}
-          {activeTab === 'work' && <Projects />}
-          {activeTab === 'contact' && (
-            <>
-              <Contact />
-              <Experience />
-            </>
-          )}
+        <Sidebar activeSection={activeSection} />
+        <main id="main-content" className="tab-main">
+          <About />
+          <Research />
+          <ExperienceProjects />
+          <Contact />
         </main>
       </div>
       <ContactFooter />

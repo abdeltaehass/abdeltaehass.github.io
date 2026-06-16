@@ -4,11 +4,11 @@ import styles from './Sidebar.module.css'
 const navLinks = [
   { label: 'About', href: '#about' },
   { label: 'Research', href: '#research' },
-  { label: 'Work', href: '#work' },
+  { label: 'Experience / Projects', href: '#work' },
   { label: 'Contact', href: '#contact' },
 ]
 
-export default function Sidebar({ activeTab }) {
+export default function Sidebar({ activeSection }) {
   const [open, setOpen] = useState(false)
 
   useEffect(() => {
@@ -99,7 +99,7 @@ export default function Sidebar({ activeTab }) {
           <nav className={styles.nav} aria-label="Section navigation">
             {navLinks.map(l => {
               const tabKey = l.href.replace('#', '')
-              const isActive = activeTab === tabKey
+              const isActive = activeSection === tabKey
               return (
                 <a
                   key={l.href}

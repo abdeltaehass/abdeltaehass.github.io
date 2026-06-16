@@ -1,0 +1,48 @@
+.section {
+  /* inherits from global */
+}
+
+.subtabs {
+  display: inline-flex;
+  gap: 4px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 4px;
+  margin-bottom: 24px;
+}
+
+.subtab {
+  font-family: var(--font-sans);
+  font-size: 0.86rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  background: none;
+  border: none;
+  padding: 7px 18px;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: color 0.2s, background 0.2s;
+}
+
+.subtab:hover {
+  color: var(--text);
+}
+
+.subtabActive {
+  color: var(--bg);
+  background: var(--text);
+}
+
+.subtabActive:hover {
+  color: var(--bg);
+}
+
+.content {
+  animation: subtabFadeIn 0.25s ease;
+}
+
+@keyframes subtabFadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: none; }
+}

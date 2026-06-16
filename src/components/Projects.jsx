@@ -122,8 +122,29 @@ function ProjectCard({ project }) {
   )
 }
 
-export default function Projects() {
+export default function Projects({ embedded = false }) {
   const ref = useScrollReveal()
+
+  const content = (
+    <>
+      <div className={styles.grid}>
+        {projects.map(p => <ProjectCard key={p.name} project={p} />)}
+      </div>
+      <div className={styles.more}>
+        <a
+          href="https://github.com/abdeltaehass"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.moreLink}
+        >
+          See more on GitHub ↗
+        </a>
+      </div>
+    </>
+  )
+
+  if (embedded) return content
+
   return (
     <section id="projects">
       <div className={`container reveal`} ref={ref}>
@@ -133,19 +154,7 @@ export default function Projects() {
           A selection of recent work — autonomous AI agents, data pipelines,
           and production mobile apps.
         </p>
-        <div className={styles.grid}>
-          {projects.map(p => <ProjectCard key={p.name} project={p} />)}
-        </div>
-        <div className={styles.more}>
-          <a
-            href="https://github.com/abdeltaehass"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.moreLink}
-          >
-            See more on GitHub ↗
-          </a>
-        </div>
+        {content}
       </div>
     </section>
   )
