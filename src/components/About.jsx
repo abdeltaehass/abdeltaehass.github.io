@@ -9,15 +9,17 @@ export default function About() {
 
         <p className={styles.bio}>
           I'm a Software Engineer at <strong>DHCS</strong> and an{' '}
-          <strong>AI Research Engineer</strong>. By day, I build data
-          pipelines, observability systems, and AI agents that run in
-          production. On the side, I co-author medical-AI research like{' '}
-          <em>SpineFairBench</em> and <em>MedInsider</em>.
+          <strong>AI Research Engineer</strong>. I work across software
+          engineering, machine learning, and AI systems — building backend
+          services, data pipelines, autonomous agents, and production mobile
+          apps. On the side, I co-author research like <em>SpineFairBench</em>{' '}
+          and <em>MedInsider</em>.
         </p>
 
         <p className={styles.bio}>
-          My focus: making AI systems reliable, fair, and safe —
-          especially in healthcare.
+          I care about building reliable, well-designed software that holds
+          up in production — and writing code I'd be happy to maintain a year
+          later.
         </p>
       </div>
     </section>
