@@ -2,11 +2,12 @@ import { useState, useEffect } from 'react'
 import './index.css'
 import Sidebar from './components/Sidebar'
 import About from './components/About'
+import Education from './components/Education'
 import Research from './components/Research'
 import ExperienceProjects from './components/ExperienceProjects'
 import Contact, { ContactFooter } from './components/Contact'
 
-const SECTIONS = ['about', 'research', 'work', 'contact']
+const SECTIONS = ['about', 'education', 'research', 'work', 'contact']
 
 function App() {
   const [activeSection, setActiveSection] = useState('about')
@@ -36,6 +37,7 @@ function App() {
         <Sidebar activeSection={activeSection} />
         <main id="main-content" className="tab-main">
           <About />
+          <Education />
           <Research />
           <ExperienceProjects />
           <Contact />

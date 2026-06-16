@@ -20,7 +20,7 @@ const jobs = [
     period: 'Aug 2025 — Present',
     location: 'Remote',
     points: [
-      'Co-authored SpineFairBench (submitted NeurIPS 2026), a counterfactual VLM benchmark auditing demographic bias in spinal-radiology report generation — evaluated 7,996 paired radiographs across a frozen 9-model panel with radiologist validation, surfacing recommendation drift across all evaluated models.',
+      'Co-authored SpineFairBench, a counterfactual VLM benchmark auditing demographic bias in spinal-radiology report generation — evaluated 7,996 paired radiographs across a frozen 9-model panel with radiologist validation, surfacing recommendation drift across all evaluated models.',
       'Trained a neutral baseline model and built data collection pipelines for 2 major open-access clinical repositories to isolate demographic bias in VLM report generation.',
       'Co-developed MedInsider, a FHIR-style benchmark measuring whether medical LLM agents preserve decision integrity when exposed to institutional and financial pressure — constructed 840 paired-twin scenarios across 5 regulatory failure families and 8 incentive conditions.',
       'Engineered simulated EHR tooling with deterministic action-log scoring, run auditing, and reproducibility manifests to evaluate tool-use agents across 9 medical vision-language models.',

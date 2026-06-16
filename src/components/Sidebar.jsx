@@ -3,6 +3,7 @@ import styles from './Sidebar.module.css'
 
 const navLinks = [
   { label: 'About', href: '#about' },
+  { label: 'Education', href: '#education' },
   { label: 'Research', href: '#research' },
   { label: 'Experience / Projects', href: '#work' },
   { label: 'Contact', href: '#contact' },

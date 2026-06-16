@@ -20,19 +20,6 @@ const socials = [
   },
 ]
 
-const education = [
-  {
-    school: 'Georgia Institute of Technology',
-    degree: 'M.S. Computer Science — Artificial Intelligence Concentration',
-    period: 'Aug 2026 — May 2028 (Expected)',
-  },
-  {
-    school: 'California State University, Sacramento',
-    degree: 'B.S. Computer Science',
-    period: 'Aug 2023 — Dec 2025',
-  },
-]
-
 export default function Contact() {
   const ref = useScrollReveal()
   const [form, setForm] = useState({ name: '', email: '', message: '' })
@@ -126,19 +113,6 @@ export default function Contact() {
           </form>
         </div>
 
-        {/* Education */}
-        <div className={styles.education}>
-          <h3 className={styles.eduHeading}>Education</h3>
-          <ul className={styles.eduList}>
-            {education.map(e => (
-              <li key={e.school} className={styles.eduItem}>
-                <div className={styles.eduSchool}>{e.school}</div>
-                <div className={styles.eduDegree}>{e.degree}</div>
-                <div className={styles.eduPeriod}>{e.period}</div>
-              </li>
-            ))}
-          </ul>
-        </div>
       </div>
     </section>
   )
