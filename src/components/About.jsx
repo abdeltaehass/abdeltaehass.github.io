@@ -10,10 +10,18 @@ export default function About() {
         <p className={styles.bio}>
           I work at the intersection of software engineering and machine learning,
           building <em>autonomous AI agents</em>, ML evaluation infrastructure, and
-          reliable data pipelines. I'm a Software Engineer at <strong>DHCS</strong> and
-          an AI Research Engineer collaborating with researchers at Columbia,
-          Johns Hopkins, Georgia Tech, and Stanford on medical-AI benchmarks like{' '}
-          <em>MedInsider</em> and <em>SpineFairBench</em>.
+          reliable data pipelines. By day, I'm a Software Engineer at{' '}
+          <strong>DHCS</strong>; on the side, I'm an AI Research Engineer
+          co-authoring medical-AI benchmarks like <em>SpineFairBench</em> (submitted
+          NeurIPS 2026) and <em>MedInsider</em>.
+        </p>
+
+        <p className={styles.bio}>
+          My research focuses on counterfactual evaluation of vision-language models
+          in healthcare — auditing whether AI systems behave consistently across
+          demographic edits and institutional pressure. On the engineering side, I
+          build observability, ETL, and agent infrastructure that hold up at
+          production scale.
         </p>
       </div>
     </section>

@@ -16,14 +16,14 @@ const jobs = [
   },
   {
     role: 'AI Research Engineer',
-    company: 'Columbia / Johns Hopkins / Georgia Tech / Stanford Collaboration',
+    company: 'Independent Research',
     period: 'Aug 2025 — Present',
     location: 'Remote',
     points: [
-      'Co-authored SpineFairBench (submitted NeurIPS 2026), a counterfactual benchmark evaluating 7,996 paired spinal radiographs to audit demographic sensitivity in VLM-based report generation across a frozen nine-model panel.',
-      'Evaluated medical LLM agent integrity across 840 paired-twin scenarios for the MedInsider FHIR-style benchmark, identifying systematic failure modes in clinical decision-making under simulated institutional pressure.',
-      'Architected evaluation and logging infrastructure — including deterministic action tracking and auditing workflows — for 9 distinct medical vision-language models across full-pipeline and baseline sub-panels.',
-      'Trained a neutral baseline model and developed data collection pipelines for 2 major open-access clinical repositories used to analyze demographic bias in spinal radiology VLM outputs.',
+      'Co-authored SpineFairBench (submitted NeurIPS 2026), a counterfactual VLM benchmark auditing demographic bias in spinal-radiology report generation — evaluated 7,996 paired radiographs across a frozen 9-model panel with radiologist validation, surfacing recommendation drift across all evaluated models.',
+      'Trained a neutral baseline model and built data collection pipelines for 2 major open-access clinical repositories to isolate demographic bias in VLM report generation.',
+      'Co-developed MedInsider, a FHIR-style benchmark measuring whether medical LLM agents preserve decision integrity when exposed to institutional and financial pressure — constructed 840 paired-twin scenarios across 5 regulatory failure families and 8 incentive conditions.',
+      'Engineered simulated EHR tooling with deterministic action-log scoring, run auditing, and reproducibility manifests to evaluate tool-use agents across 9 medical vision-language models.',
     ],
   },
   {
@@ -32,10 +32,9 @@ const jobs = [
     period: 'May 2025 — Present',
     location: 'Sacramento, CA',
     points: [
-      'Automated monitoring and reporting pipelines across enterprise systems, reducing manual observability overhead by 40% and cutting mean time to detection (MTTD) for production incidents in half through proactive anomaly surfacing.',
-      'Built backend integrations and validation workflows that surfaced system behavior anomalies early, accelerating root-cause analysis by 35% and streamlining cross-team stakeholder communication during incident response.',
-      'Established internal dashboards and reporting applications to visualize agent-driven operational metrics in real time, reducing incident resolution time by 30% and improving leadership visibility into system health.',
-      'Implemented log-processing pipelines and monitoring integrations that improved real-time alerting accuracy by 20%, reducing false positives and engineer alert fatigue.',
+      'Automated monitoring and reporting pipelines across enterprise systems, reducing manual observability overhead by 40% and cutting mean time to detection (MTTD) for production incidents in half.',
+      'Built backend integrations and validation workflows that surfaced anomalies early, accelerating root-cause analysis by 35%.',
+      'Established internal dashboards visualizing agent-driven operational metrics, reducing incident resolution time by 30%; improved real-time alerting accuracy by 20% through log-processing pipelines.',
     ],
   },
   {
@@ -44,9 +43,8 @@ const jobs = [
     period: 'May 2024 — Jul 2025',
     location: 'Sacramento, CA',
     points: [
-      'Scaled distributed data pipelines processing 3 TB/week across distributed cloud infrastructure, improving throughput and system reliability in a high-volume production environment.',
-      'Optimized data workflows and query performance, identifying and resolving bottlenecks that cut average pipeline latency and improved system stability under sustained load.',
-      'Revamped data integrity checks with SQL — prevented five critical production issues and automated 75% of data validation tasks with 100% test coverage.',
+      'Scaled distributed data pipelines processing 3 TB/week across cloud infrastructure, improving throughput and system reliability in a high-volume production environment.',
+      'Revamped SQL data-integrity checks, preventing 5 critical production data-corruption issues and automating 75% of validation tasks with 100% test coverage.',
       'Collaborated with a team of 3 to automate model retraining agents, reducing manual effort by 6 hours/week via autonomous performance metrics.',
     ],
   },
