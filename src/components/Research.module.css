@@ -82,10 +82,11 @@
   font-weight: 500;
 }
 
-.affil {
-  font-size: 0.82rem;
-  color: var(--text-muted);
-  font-style: italic;
+.authorMe {
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1.5px;
 }
 
 .abstract {

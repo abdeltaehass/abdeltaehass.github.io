@@ -4,8 +4,11 @@ import styles from './Research.module.css'
 const papers = [
   {
     title: 'SpineFairBench: A Counterfactual Benchmark for Auditing Demographic Sensitivity in Spinal Radiology VLM Reports',
-    authors: 'Ahmed Taha, Abdelrahman Taeha, Muzzammil Ahmadzada',
-    affiliations: 'Columbia / Johns Hopkins · Georgia Tech · Stanford',
+    authors: [
+      { name: 'Ahmed Taha' },
+      { name: 'Abdelrahman Taeha', me: true },
+      { name: 'Muzzammil Ahmadzada' },
+    ],
     abstract: 'A paired counterfactual benchmark for auditing demographic sensitivity in spinal-radiology VLM reports. Evaluates a frozen nine-model VLM panel across 7,996 source/counterfactual pairs — apparent age and sex edited under target-pathology preservation. Recommendation drift observed in all nine models; 443/450 stratified pairs (98.4%) passed blinded review by three board-certified radiologists.',
     tags: ['Counterfactual Fairness', 'VLM', 'Medical Imaging', 'Stable Diffusion'],
     paper: 'https://www.researchgate.net/publication/404620116_SpineFairBench_A_Counterfactual_Benchmark_for_Auditing_Demographic_Sensitivity_in_Spinal_Radiology_VLM_Reports',
@@ -14,8 +17,9 @@ const papers = [
   },
   {
     title: 'MedInsider: Evaluating Medical LLM Agent Integrity Under Institutional Pressure',
-    authors: 'Contributor',
-    affiliations: 'Independent Research',
+    authors: [
+      { name: 'Abdelrahman Taeha', me: true },
+    ],
     abstract: 'A FHIR-style benchmark evaluating medical LLM agent integrity under institutional pressure across 840 paired-twin scenarios. Contributed evaluation and logging infrastructure for agent behavior analysis — deterministic action tracking, auditing workflows, and reproducibility tooling.',
     tags: ['LLM Agents', 'FHIR', 'Healthcare AI', 'Evaluation'],
     paper: null,
@@ -24,12 +28,24 @@ const papers = [
   },
 ]
 
+function AuthorsLine({ authors }) {
+  return (
+    <p className={styles.authors}>
+      {authors.map((a, i) => (
+        <span key={i}>
+          {i > 0 && ', '}
+          {a.me ? <span className={styles.authorMe}>{a.name}</span> : a.name}
+        </span>
+      ))}
+    </p>
+  )
+}
+
 function PaperCard({ paper }) {
   return (
     <article className={styles.card}>
       <h3 className={styles.title}>{paper.title}</h3>
-      <p className={styles.authors}>{paper.authors}</p>
-      <p className={styles.affil}>{paper.affiliations}</p>
+      <AuthorsLine authors={paper.authors} />
       <p className={styles.abstract}>{paper.abstract}</p>
       <div className={styles.tags}>
         {paper.tags.map(t => <span key={t} className={styles.tag}>{t}</span>)}
@@ -75,8 +91,9 @@ export default function Research() {
         <p className="section-label">Research</p>
         <h2 className="section-title">Publications & benchmarks.</h2>
         <p className="section-subtitle">
-          Building evaluation infrastructure and counterfactual benchmarks for AI systems
-          in healthcare — focused on bias auditing, agent integrity, and reproducibility.
+          Counterfactual benchmarks and evaluation infrastructure for AI
+          systems in healthcare — focused on bias auditing, agent integrity,
+          and reproducibility.
         </p>
         <div className={styles.list}>
           {papers.map(p => <PaperCard key={p.title} paper={p} />)}
