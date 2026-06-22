@@ -13,7 +13,7 @@ const jobs = [
   },
   {
     role: 'AI Research Engineer',
-    company: 'Independent Research',
+    company: 'Medical AI Research',
     period: 'Aug 2025 — Present',
     points: [
       'Co-authored SpineFairBench, a counterfactual VLM benchmark auditing demographic bias across 7,996 paired spinal radiographs and a 9-model panel.',
