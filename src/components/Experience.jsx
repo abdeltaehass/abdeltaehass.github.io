@@ -3,14 +3,6 @@ import styles from './Experience.module.css'
 
 const jobs = [
   {
-    role: 'AI Engineering Fellow (AI110 · Foundations of AI Engineering)',
-    company: 'CodePath',
-    period: 'Summer 2026',
-    points: [
-      'Selected for CodePath\'s Foundations of AI Engineering program — an intensive on building, deploying, and evaluating modern AI systems.',
-    ],
-  },
-  {
     role: 'Founder',
     company: 'Al-Manar — Islamic Companion App',
     period: 'Mar 2026 — Present',
@@ -24,8 +16,8 @@ const jobs = [
     company: 'Medical AI Research',
     period: 'Aug 2025 — Present',
     points: [
-      'Co-authored SpineFairBench, a counterfactual VLM benchmark auditing demographic bias across 7,996 paired spinal radiographs and a 9-model panel.',
-      'Co-developed MedInsider, a FHIR-style benchmark testing whether medical LLM agents preserve decision integrity under institutional pressure (840 paired-twin scenarios).',
+      'Co-authored SpineFairBench, a counterfactual VLM evaluation suite auditing demographic bias across 7,996 paired spinal radiographs and a 9-model panel.',
+      'Co-developed MedInsider, a FHIR-style evaluation suite testing whether medical LLM agents preserve decision integrity under institutional pressure (840 paired-twin scenarios).',
     ],
   },
   {

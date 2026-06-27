@@ -1,6 +1,6 @@
 # Abdelrahman Taeha
 
-> Software Engineer at DHCS (California Dept. of Health Care Services) and AI Research Engineer. Co-author of SpineFairBench (counterfactual benchmark for spinal-radiology VLM auditing) and contributor to MedInsider (medical LLM agent integrity benchmark). Pursuing an M.S. in Computer Science (Artificial Intelligence) at Georgia Tech.
+> Software Engineer at DHCS (California Dept. of Health Care Services) and AI Research Engineer. Co-author of SpineFairBench (counterfactual evaluation suite for spinal-radiology VLM auditing) and contributor to MedInsider (medical LLM agent integrity evaluation suite). Pursuing an M.S. in Computer Science (Artificial Intelligence) at Georgia Tech.
 
 Portfolio: https://abdeltaehass.github.io/
 
@@ -15,8 +15,8 @@ Portfolio: https://abdeltaehass.github.io/
 
 ## Research
 
-- **SpineFairBench** (Co-author, with Ahmed Taha and Muzzammil Ahmadzada):Paired counterfactual benchmark for auditing demographic sensitivity in spinal-radiology vision-language model (VLM) reports. Evaluates a frozen nine-model VLM panel across 7,996 source/counterfactual pairs (apparent age and sex edited under target-pathology preservation). Recommendation drift observed in all nine models; 443/450 stratified pairs (98.4%) passed blinded review by three board-certified radiologists. Paper: https://www.researchgate.net/publication/404620116 · Code: https://github.com/ahmedtaha100/SpineFairBench · Dataset: https://huggingface.co/datasets/ahmedtaha100/spinefairbench-artifacts
-- **MedInsider** (Contributor): FHIR-style benchmark evaluating medical LLM agent integrity under institutional pressure across 840 paired-twin scenarios. Built evaluation and logging infrastructure including deterministic action tracking, auditing workflows, and reproducibility tooling.
+- **SpineFairBench** (Co-author, with Ahmed Taha and Muzzammil Ahmadzada):Paired counterfactual evaluation suite for auditing demographic sensitivity in spinal-radiology vision-language model (VLM) reports. Evaluates a frozen nine-model VLM panel across 7,996 source/counterfactual pairs (apparent age and sex edited under target-pathology preservation). Recommendation drift observed in all nine models; 443/450 stratified pairs (98.4%) passed blinded review by three board-certified radiologists. Paper: https://www.researchgate.net/publication/404620116 · Code: https://github.com/ahmedtaha100/SpineFairBench · Dataset: https://huggingface.co/datasets/ahmedtaha100/spinefairbench-artifacts
+- **MedInsider** (Contributor): FHIR-style evaluation suite measuring medical LLM agent integrity under institutional pressure across 840 paired-twin scenarios. Built evaluation and logging infrastructure including deterministic action tracking, auditing workflows, and reproducibility tooling.
 
 ## Experience
 
@@ -35,4 +35,4 @@ Portfolio: https://abdeltaehass.github.io/
 
 ## Skills
 
-Python, JavaScript/React, Flutter/Dart, Swift, C/C++, Java, SQL · PyTorch, TensorFlow, LangChain, CrewAI · AWS, GCP, Docker, CI/CD · LLM evaluation, RAG, autonomous agents, counterfactual benchmarks
+Python, JavaScript/React, Flutter/Dart, Swift, C/C++, Java, SQL · PyTorch, TensorFlow, LangChain, CrewAI · AWS, GCP, Docker, CI/CD · LLM evaluation, RAG, autonomous agents, counterfactual evaluation

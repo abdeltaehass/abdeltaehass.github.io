@@ -3,13 +3,13 @@ import styles from './Research.module.css'
 
 const papers = [
   {
-    title: 'SpineFairBench: A Counterfactual Benchmark for Auditing Demographic Sensitivity in Spinal Radiology VLM Reports',
+    title: 'SpineFairBench: A Counterfactual Evaluation Suite for Auditing Demographic Sensitivity in Spinal Radiology VLM Reports',
     authors: [
       { name: 'Ahmed Taha' },
       { name: 'Abdelrahman Taeha', me: true },
       { name: 'Muzzammil Ahmadzada' },
     ],
-    abstract: 'A paired counterfactual benchmark for auditing demographic sensitivity in spinal-radiology VLM reports. Evaluates a frozen nine-model VLM panel across 7,996 source/counterfactual pairs — apparent age and sex edited under target-pathology preservation. Recommendation drift observed in all nine models; 443/450 stratified pairs (98.4%) passed blinded review by three board-certified radiologists.',
+    abstract: 'A paired counterfactual evaluation suite for auditing demographic sensitivity in spinal-radiology VLM reports. Evaluates a frozen nine-model VLM panel across 7,996 source/counterfactual pairs — apparent age and sex edited under target-pathology preservation. Recommendation drift observed in all nine models; 443/450 stratified pairs (98.4%) passed blinded review by three board-certified radiologists.',
     tags: ['Counterfactual Fairness', 'VLM', 'Medical Imaging', 'Stable Diffusion'],
     paper: 'https://www.researchgate.net/publication/404620116_SpineFairBench_A_Counterfactual_Benchmark_for_Auditing_Demographic_Sensitivity_in_Spinal_Radiology_VLM_Reports',
     code: 'https://github.com/ahmedtaha100/SpineFairBench',
@@ -22,7 +22,7 @@ const papers = [
       { name: 'Abdelrahman Taeha', me: true },
       { name: 'Muzzammil Ahmadzada' },
     ],
-    abstract: 'A FHIR-style benchmark evaluating medical LLM agent integrity under institutional pressure across 840 paired-twin scenarios. Contributed evaluation and logging infrastructure for agent behavior analysis — deterministic action tracking, auditing workflows, and reproducibility tooling.',
+    abstract: 'A FHIR-style evaluation suite measuring medical LLM agent integrity under institutional pressure across 840 paired-twin scenarios. Contributed evaluation and logging infrastructure for agent behavior analysis — deterministic action tracking, auditing workflows, and reproducibility tooling.',
     tags: ['LLM Agents', 'FHIR', 'Healthcare AI', 'Evaluation'],
     paper: null,
     code: null,

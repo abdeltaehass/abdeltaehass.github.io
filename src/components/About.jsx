@@ -11,8 +11,8 @@ export default function About() {
           By day, I'm a Software Engineer at <strong>DHCS</strong> —
           automating observability pipelines and cutting incident detection
           time in half. By night, I'm an <strong>AI Research Engineer</strong>{' '}
-          co-authoring benchmarks that ask whether medical AI gives the same
-          advice to identical patients of different ages or sexes.{' '}
+          co-authoring evaluation studies that ask whether medical AI gives the
+          same advice to identical patients of different ages or sexes.{' '}
           <em>(Spoiler: it doesn't.)</em>
         </p>
 
