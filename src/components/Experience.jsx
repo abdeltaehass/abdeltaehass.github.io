@@ -3,6 +3,14 @@ import styles from './Experience.module.css'
 
 const jobs = [
   {
+    role: 'AI Engineering Fellow (AI110 · Foundations of AI Engineering)',
+    company: 'CodePath',
+    period: 'Summer 2026',
+    points: [
+      'Selected for CodePath\'s Foundations of AI Engineering program — an intensive on building, deploying, and evaluating modern AI systems.',
+    ],
+  },
+  {
     role: 'Founder',
     company: 'Al-Manar — Islamic Companion App',
     period: 'Mar 2026 — Present',

@@ -20,7 +20,7 @@ export default function Education() {
     <section id="education">
       <div className={`container reveal`} ref={ref}>
         <p className="section-label">Education</p>
-        <h2 className="section-title">Education.</h2>
+        <h2 className="section-title">Where I've studied.</h2>
 
         <ul className={styles.list}>
           {education.map(e => (

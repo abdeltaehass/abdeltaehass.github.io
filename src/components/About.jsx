@@ -8,17 +8,18 @@ export default function About() {
         <h1 className="section-title">Hi, I'm Abdelrahman.</h1>
 
         <p className={styles.bio}>
-          I'm a Software Engineer at <strong>DHCS</strong> and an{' '}
-          <strong>AI Research Engineer</strong>. I work across software
-          engineering, machine learning, and AI systems — building backend
-          services, data pipelines, autonomous agents, and production mobile
-          apps. On the side, I co-author research like <em>SpineFairBench</em>{' '}
-          and <em>MedInsider</em>.
+          By day, I'm a Software Engineer at <strong>DHCS</strong> —
+          automating observability pipelines and cutting incident detection
+          time in half. By night, I'm an <strong>AI Research Engineer</strong>{' '}
+          co-authoring benchmarks that ask whether medical AI gives the same
+          advice to identical patients of different ages or sexes.{' '}
+          <em>(Spoiler: it doesn't.)</em>
         </p>
 
         <p className={styles.bio}>
-          I care about building reliable, well-designed software that holds
-          up in production — and writing code I'd be happy to maintain a year
+          I work at the intersection of software engineering and machine
+          learning. I care about systems that are fast in production and
+          rigorous when it matters — and code I'd happily maintain a year
           later.
         </p>
       </div>

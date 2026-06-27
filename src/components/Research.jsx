@@ -18,7 +18,9 @@ const papers = [
   {
     title: 'MedInsider: Evaluating Medical LLM Agent Integrity Under Institutional Pressure',
     authors: [
+      { name: 'Ahmed Taha' },
       { name: 'Abdelrahman Taeha', me: true },
+      { name: 'Muzzammil Ahmadzada' },
     ],
     abstract: 'A FHIR-style benchmark evaluating medical LLM agent integrity under institutional pressure across 840 paired-twin scenarios. Contributed evaluation and logging infrastructure for agent behavior analysis — deterministic action tracking, auditing workflows, and reproducibility tooling.',
     tags: ['LLM Agents', 'FHIR', 'Healthcare AI', 'Evaluation'],
@@ -89,11 +91,10 @@ export default function Research() {
     <section id="research" className={styles.section}>
       <div className={`container reveal`} ref={ref}>
         <p className="section-label">Research</p>
-        <h2 className="section-title">Publications & benchmarks.</h2>
+        <h2 className="section-title">Publications.</h2>
         <p className="section-subtitle">
-          Counterfactual benchmarks and evaluation infrastructure for AI
-          systems in healthcare — focused on bias auditing, agent integrity,
-          and reproducibility.
+          Open-source audit tools for medical AI — testing demographic
+          robustness, agent integrity, and reproducibility.
         </p>
         <div className={styles.list}>
           {papers.map(p => <PaperCard key={p.title} paper={p} />)}
