@@ -5,6 +5,13 @@ import styles from './Projects.module.css'
 
 const projects = [
   {
+    name: 'R.A.D.A.R. — Vision-Language Radiology Report Generator',
+    description: 'End-to-end vision-language system that generates chest-X-ray reports from images. Parameter-efficient fine-tuning of BLIP-2 with LoRA (trained 0.33% of 3.76B params) on 3,337 patient-split IU X-Ray studies. Quantified and mitigated hallucination via reference-grounded analysis across decoding strategies — cut the hallucination rate from 40% to 10% via confidence-threshold abstention. Engineered a clinical-term overlap metric exposing a fluent baseline scoring 44 ROUGE-L but 0 clinical-F1, and shipped an interactive Gradio demo with per-sentence Grad-CAM grounding on a quantized Hugging Face Space.',
+    tags: ['Python', 'PyTorch', 'BLIP-2', 'LoRA', 'Gradio', 'Hugging Face'],
+    github: 'https://github.com/abdeltaehass/RADAR',
+    live: null,
+  },
+  {
     name: 'AutoApply',
     description: 'Full-stack job-application toolkit that scrapes CalCareers (and external boards), calls the Claude API to generate tailored resumes, cover letters, and SOQs per posting, scores fit on a 0–100 scale, and tracks every application through a local web dashboard — with a human-in-the-loop review step.',
     tags: ['Python', 'Claude API', 'Web Scraping', 'Flask'],
