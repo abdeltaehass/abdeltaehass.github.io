@@ -20,4 +20,4 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
-Sitemap: https://abdeltaehass.github.io/sitemap.xml
+Sitemap: https://abdelrahmantaeha.com/sitemap.xml

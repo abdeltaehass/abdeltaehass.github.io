@@ -2,7 +2,7 @@
 
 > Software Engineer at DHCS (California Dept. of Health Care Services) and AI Research Engineer. Co-author of SpineFairBench (counterfactual evaluation suite for spinal-radiology VLM auditing) and contributor to MedInsider (medical LLM agent integrity evaluation suite). Pursuing an M.S. in Computer Science (Artificial Intelligence) at Georgia Tech.
 
-Portfolio: https://abdeltaehass.github.io/
+Portfolio: https://abdelrahmantaeha.com/
 
 ## About
 
