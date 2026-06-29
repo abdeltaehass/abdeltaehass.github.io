@@ -5,10 +5,10 @@ import styles from './Projects.module.css'
 
 const projects = [
   {
-    name: 'R.A.D.A.R. — Vision-Language Radiology Report Generator',
-    description: 'End-to-end vision-language system that generates chest-X-ray reports from images. Parameter-efficient fine-tuning of BLIP-2 with LoRA (trained 0.33% of 3.76B params) on 3,337 patient-split IU X-Ray studies. Quantified and mitigated hallucination via reference-grounded analysis across decoding strategies — cut the hallucination rate from 40% to 10% via confidence-threshold abstention. Engineered a clinical-term overlap metric exposing a fluent baseline scoring 44 ROUGE-L but 0 clinical-F1, and shipped an interactive Gradio demo with per-sentence Grad-CAM grounding on a quantized Hugging Face Space.',
-    tags: ['Python', 'PyTorch', 'BLIP-2', 'LoRA', 'Gradio', 'Hugging Face'],
-    github: 'https://github.com/abdeltaehass/RADAR',
+    name: 'SENTRY — Vision-Language Incident Report Generator',
+    description: 'End-to-end vision-language system that generates security-incident reports from camera frames, pairing a CLIP-style image encoder with a LoRA-fine-tuned language model to adapt an open pretrained model efficiently rather than training from scratch. Quantified and mitigated hallucination by measuring a hallucination rate against a manually reviewed set, then flagging low-confidence or ungrounded claims. Engineered per-sentence Grad-CAM-style grounding that visualizes exactly which pixels the model attended to for each generated claim — shipped as a live, interactive demo on Hugging Face Spaces.',
+    tags: ['Python', 'PyTorch', 'CLIP', 'LoRA', 'Hugging Face', 'Grad-CAM'],
+    github: 'https://github.com/abdeltaehass/SENTRY',
     live: null,
   },
   {
