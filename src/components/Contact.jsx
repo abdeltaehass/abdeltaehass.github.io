@@ -1,12 +1,12 @@
-import { useState } from 'react'
+import { useForm, ValidationError } from '@formspree/react'
 import useScrollReveal from '../hooks/useScrollReveal'
 import styles from './Contact.module.css'
 
 const socials = [
   {
     label: 'EMAIL',
-    handle: 'abdeltaehass@gmail.com',
-    href: 'mailto:abdeltaehass@gmail.com',
+    handle: 'apply@abdelrahmantaeha.com',
+    href: 'mailto:apply@abdelrahmantaeha.com',
   },
   {
     label: 'GITHUB',
@@ -22,19 +22,7 @@ const socials = [
 
 export default function Contact() {
   const ref = useScrollReveal()
-  const [form, setForm] = useState({ name: '', email: '', message: '' })
-  const [status, setStatus] = useState(null)
-
-  const handleChange = e => setForm(f => ({ ...f, [e.target.name]: e.target.value }))
-
-  const handleSubmit = e => {
-    e.preventDefault()
-    const subject = encodeURIComponent(`Message from ${form.name}`)
-    const body = encodeURIComponent(`${form.message}\n\n— ${form.name}\n${form.email}`)
-    window.location.href = `mailto:abdeltaehass@gmail.com?subject=${subject}&body=${body}`
-    setStatus('sent')
-    setForm({ name: '', email: '', message: '' })
-  }
+  const [state, handleSubmit] = useForm('mqevdawp')
 
   return (
     <section id="contact" className={styles.section}>
@@ -62,57 +50,62 @@ export default function Contact() {
             ))}
           </div>
 
-          <form className={styles.form} onSubmit={handleSubmit}>
-            <div className={styles.row}>
-              <div className={styles.field}>
-                <label className={styles.label} htmlFor="name">Name</label>
-                <input
-                  id="name"
-                  name="name"
-                  type="text"
-                  required
-                  placeholder="Your name"
-                  className={styles.input}
-                  value={form.name}
-                  onChange={handleChange}
-                />
+          {state.succeeded ? (
+            <div className={styles.form}>
+              <p className={styles.successCard}>
+                <strong>Thanks for reaching out!</strong> I got your message and
+                will get back to you soon.
+              </p>
+            </div>
+          ) : (
+            <form className={styles.form} onSubmit={handleSubmit}>
+              <div className={styles.row}>
+                <div className={styles.field}>
+                  <label className={styles.label} htmlFor="name">Name</label>
+                  <input
+                    id="name"
+                    name="name"
+                    type="text"
+                    required
+                    placeholder="Your name"
+                    className={styles.input}
+                  />
+                  <ValidationError prefix="Name" field="name" errors={state.errors} className={styles.error} />
+                </div>
+                <div className={styles.field}>
+                  <label className={styles.label} htmlFor="email">Email</label>
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    required
+                    placeholder="your@email.com"
+                    className={styles.input}
+                  />
+                  <ValidationError prefix="Email" field="email" errors={state.errors} className={styles.error} />
+                </div>
               </div>
               <div className={styles.field}>
-                <label className={styles.label} htmlFor="email">Email</label>
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
+                <label className={styles.label} htmlFor="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
                   required
-                  placeholder="your@email.com"
-                  className={styles.input}
-                  value={form.email}
-                  onChange={handleChange}
+                  rows={4}
+                  placeholder="What's on your mind?"
+                  className={styles.textarea}
                 />
+                <ValidationError prefix="Message" field="message" errors={state.errors} className={styles.error} />
               </div>
-            </div>
-            <div className={styles.field}>
-              <label className={styles.label} htmlFor="message">Message</label>
-              <textarea
-                id="message"
-                name="message"
-                required
-                rows={4}
-                placeholder="What's on your mind?"
-                className={styles.textarea}
-                value={form.message}
-                onChange={handleChange}
-              />
-            </div>
-            <button type="submit" className={styles.btn}>
-              Send message →
-            </button>
-            {status === 'sent' && (
-              <p className={styles.success}>Opening your mail client…</p>
-            )}
-          </form>
+              <button type="submit" className={styles.btn} disabled={state.submitting}>
+                {state.submitting ? 'Sending…' : 'Send message →'}
+              </button>
+              {state.errors && Object.keys(state.errors).length > 0 && (
+                <p className={styles.error}>Something went wrong. Please try again.</p>
+              )}
+            </form>
+          )}
         </div>
-
       </div>
     </section>
   )
@@ -126,7 +119,7 @@ export function ContactFooter() {
         <div className={styles.footerLinks}>
           <a href="https://github.com/abdeltaehass" target="_blank" rel="noopener noreferrer">GitHub</a>
           <a href="https://www.linkedin.com/in/abdel-rahman-taeha-9113b320b/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a href="mailto:abdeltaehass@gmail.com">Email</a>
+          <a href="mailto:apply@abdelrahmantaeha.com">Email</a>
         </div>
       </div>
     </footer>
