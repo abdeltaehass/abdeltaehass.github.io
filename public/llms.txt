@@ -1,6 +1,6 @@
 # Abdelrahman Taeha
 
-> Software Engineer at DHCS (California Dept. of Health Care Services) and AI Research Engineer. Co-author of SpineFairBench (counterfactual evaluation suite for spinal-radiology VLM auditing) and contributor to MedInsider (medical LLM agent integrity evaluation suite). Pursuing an M.S. in Computer Science (Artificial Intelligence) at Georgia Tech.
+> Software Engineer at DHCS (California Dept. of Health Care Services) and AI Research Engineer. Co-author of SpineFairBench (counterfactual evaluation suite for spinal-radiology VLM auditing) and contributor to MedInsider (medical LLM agent integrity evaluation suite). Pursuing an M.S. in Computer Science (Machine Learning) at Georgia Tech.
 
 Portfolio: https://abdelrahmantaeha.com/
 
@@ -8,10 +8,10 @@ Portfolio: https://abdelrahmantaeha.com/
 
 - **Name**: Abdelrahman Taeha
 - **Location**: Sacramento, CA
-- **Email**: abdeltaehass@gmail.com
+- **Email**: apply@abdelrahmantaeha.com
 - **GitHub**: https://github.com/abdeltaehass
 - **LinkedIn**: https://www.linkedin.com/in/abdel-rahman-taeha-9113b320b/
-- **Education**: B.S. Computer Science, Sacramento State (2023–2025); M.S. Computer Science — Artificial Intelligence, Georgia Tech (2026–2028 expected)
+- **Education**: B.S. Computer Science, Sacramento State (2023–2025); M.S. Computer Science — Machine Learning, Georgia Tech (2026–2028 expected)
 
 ## Research
 

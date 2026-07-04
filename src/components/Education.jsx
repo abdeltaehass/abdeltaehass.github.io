@@ -4,7 +4,7 @@ import styles from './Education.module.css'
 const education = [
   {
     school: 'Georgia Institute of Technology',
-    degree: 'M.S. Computer Science — Artificial Intelligence Concentration',
+    degree: 'M.S. Computer Science — Machine Learning Concentration',
     period: 'Aug 2026 — May 2028 (Expected)',
   },
   {
