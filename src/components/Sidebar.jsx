@@ -64,7 +64,7 @@ export default function Sidebar({ activeSection }) {
 
           <div className={styles.socials}>
             <a
-              href="https://www.linkedin.com/in/abdel-rahman-taeha-9113b320b/"
+              href="https://www.linkedin.com/in/abdelrahman-taeha-9113b320b/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
@@ -86,7 +86,7 @@ export default function Sidebar({ activeSection }) {
               </svg>
             </a>
             <a
-              href="mailto:abdeltaehass@gmail.com"
+              href="mailto:apply@abdelrahmantaeha.com"
               aria-label="Email"
               className={styles.socialBtn}
             >

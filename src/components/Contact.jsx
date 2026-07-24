@@ -15,8 +15,8 @@ const socials = [
   },
   {
     label: 'LINKEDIN',
-    handle: 'linkedin.com/in/abdel-rahman-taeha',
-    href: 'https://www.linkedin.com/in/abdel-rahman-taeha-9113b320b/',
+    handle: 'linkedin.com/in/abdelrahman-taeha',
+    href: 'https://www.linkedin.com/in/abdelrahman-taeha-9113b320b/',
   },
 ]
 
@@ -118,7 +118,7 @@ export function ContactFooter() {
         <span className={styles.footerLeft}>© {new Date().getFullYear()} Abdelrahman Taeha</span>
         <div className={styles.footerLinks}>
           <a href="https://github.com/abdeltaehass" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a href="https://www.linkedin.com/in/abdel-rahman-taeha-9113b320b/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://www.linkedin.com/in/abdelrahman-taeha-9113b320b/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           <a href="mailto:apply@abdelrahmantaeha.com">Email</a>
         </div>
       </div>
