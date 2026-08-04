@@ -3,15 +3,6 @@ import styles from './Experience.module.css'
 
 const jobs = [
   {
-    role: 'Founder',
-    company: 'Al-Manar — Islamic Companion App',
-    period: 'Mar 2026 — Present',
-    points: [
-      'Launched a production iOS app built with Flutter & Dart — owning the full lifecycle from UI/UX to App Store distribution via Xcode Cloud CI/CD.',
-      'Integrated Google Places API with Haversine geometry for GPS-based prayer times and masjid discovery, supporting users in 9 languages.',
-    ],
-  },
-  {
     role: 'AI Research Engineer',
     company: 'Medical AI Research',
     period: 'Aug 2025 — Present',

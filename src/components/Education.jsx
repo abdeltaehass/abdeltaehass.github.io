@@ -17,6 +17,11 @@ const education = [
     degree: 'AI110 — Foundations of AI Engineering',
     period: 'Summer 2026',
   },
+  {
+    school: 'CodePath',
+    degree: 'AI301 — AI Open Source Capstone',
+    period: 'Fall 2026',
+  },
 ]
 
 export default function Education() {
