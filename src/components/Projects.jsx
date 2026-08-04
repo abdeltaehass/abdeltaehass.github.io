@@ -5,6 +5,13 @@ import styles from './Projects.module.css'
 
 const projects = [
   {
+    name: 'APEX — Arrhythmia Pattern Explainer',
+    description: 'End-to-end ECG decision-support system classifying 71 diagnostic categories, hitting 0.920 macro-AUROC on PTB-XL\'s held-out test split — matching published benchmarks with a compact 1D CNN, served via FastAPI at 6 ms inference. Engineered a reliability layer that flags the model\'s own untrustworthy output: per-lead Grad-CAM grounding plus four consistency and confidence checks, documented in a Hugging Face model card with a measured sex-performance disparity (0.925 vs 0.906 AUROC). Reduced Expected Calibration Error from 0.079 to 0.002 (97%) via per-label vector scaling with AUROC unchanged, cutting spurious findings 93% (5.09 → 0.35 per record).',
+    tags: ['Python', 'PyTorch', 'FastAPI', '1D CNN', 'Grad-CAM', 'Hugging Face'],
+    github: 'https://github.com/abdeltaehass/apex-arrhythmia-explainer',
+    live: null,
+  },
+  {
     name: 'SENTRY — Vision-Language Incident Report Generator',
     description: 'End-to-end vision-language system that generates security-incident reports from camera frames, pairing a CLIP-style image encoder with a LoRA-fine-tuned language model to adapt an open pretrained model efficiently rather than training from scratch. Quantified and mitigated hallucination by measuring a hallucination rate against a manually reviewed set, then flagging low-confidence or ungrounded claims. Engineered per-sentence Grad-CAM-style grounding that visualizes exactly which pixels the model attended to for each generated claim — shipped as a live, interactive demo on Hugging Face Spaces.',
     tags: ['Python', 'PyTorch', 'CLIP', 'LoRA', 'Hugging Face', 'Grad-CAM'],
@@ -20,7 +27,7 @@ const projects = [
   },
   {
     name: 'S.A.I.N.T. — Network Intrusion Detection System',
-    description: 'AI agent reasoning engine for threat detection, reaching 89% accuracy on NSL-KDD (125K+ samples). Decision-making layer uses 41 traffic-flow features (protocol stats, TCP flag distributions, temporal patterns) to autonomously classify and flag malicious network activity in real time. Low-latency inference via Flask + Redis + Plotly, processing 50–100 connections/sec with an interactive agent-in-the-loop dashboard.',
+    description: 'Anomaly detection reasoning engine for network threats, reaching 89% accuracy on NSL-KDD (125K+ samples) via feature engineering across 41 traffic-flow features (protocol stats, TCP flag distributions, temporal patterns). Low-latency inference agent built with Flask + Redis + Plotly, processing 50–100 network connections/sec with an interactive agent-in-the-loop dashboard for analyst review.',
     tags: ['Python', 'PyTorch', 'Flask', 'Redis', 'NumPy'],
     github: 'https://github.com/abdeltaehass/S.A.I.N.T.',
     live: null,

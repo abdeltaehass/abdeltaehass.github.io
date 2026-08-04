@@ -17,7 +17,7 @@ const jobs = [
     period: 'Aug 2025 — Present',
     points: [
       'Co-authored SpineFairBench, a counterfactual VLM evaluation suite auditing demographic bias across 7,996 paired spinal radiographs and a 9-model panel.',
-      'Co-developed MedInsider, a FHIR-style evaluation suite testing whether medical LLM agents preserve decision integrity under institutional pressure (840 paired-twin scenarios).',
+      'Owned end-to-end development of MedInsider, a FHIR-style evaluation suite testing whether medical LLM agents preserve decision integrity under institutional and financial pressure — 840 paired-twin scenarios across 5 regulatory failure families and 8 incentive conditions.',
     ],
   },
   {
